@@ -5,4 +5,4 @@ G="\e[32m"
 B="\e[33m"
 N="\e[0m"
 
-echo -e "$R Hello World$N, $B I am learning linux$N"
+echo "$R Hello World$N, $B I am learning linux$N"
