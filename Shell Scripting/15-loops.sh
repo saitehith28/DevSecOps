@@ -28,6 +28,6 @@ do
         dnf install $package -y &>>$LOGS_FILE
         VALIDATE $? "Installing $package"
     else
-        echo "$package already installed, skipping" tee -a $LOGS_FILE
+        echo "$package already installed, skipping" | tee -a $LOGS_FILE
     fi
 done
