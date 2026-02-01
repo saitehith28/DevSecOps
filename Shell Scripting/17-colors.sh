@@ -2,7 +2,7 @@
 
 R="\e[31m"
 G="\e[32m"
-B="\e[33m"
+Y="\e[33m"
 N="\e[0m"
 
 USERID=$(id -u)
@@ -29,7 +29,7 @@ for package in $@
 do
     dnf list installed $package &>>$LOGS_FILE
     if [ $? -ne 0 ]; then
-        echo -e "$B $package not installed, Installing...$N" | tee -a $LOGS_FILE
+        echo -e "$Y $package not installed, Installing...$N" | tee -a $LOGS_FILE
         dnf install $package -y &>>$LOGS_FILE
         VALIDATE $? "Installing $package"
     else

@@ -2,7 +2,7 @@
 
 R="\e[31m"
 G="\e[32m"
-B="\e[33m"
+Y="\e[33m"
 N="\e[0m"
 
-echo -e "$R Hello World$N, $B I am learning linux$N"
+echo -e "$R Hello World$N, $Y I am learning linux$N"
