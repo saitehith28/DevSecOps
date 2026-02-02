@@ -42,7 +42,7 @@ do
         "Comment": "Updating Record",
         "Changes":[
             {
-                "Action":"UPSERT"
+                "Action":"UPSERT",
                 "ResourceRecordSet":{
                     "Name": "'$RECORD_NAME'",
                     "Type": "A",
