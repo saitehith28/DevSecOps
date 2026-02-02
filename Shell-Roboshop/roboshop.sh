@@ -1,8 +1,8 @@
 #!/bin/bash
 
-SG_ID=
-AMI_ID=
-ZONE_ID=
+SG_ID="sg-027741b89433f3f81"
+AMI_ID="ami-0220d79f3f480ecf5"
+ZONE_ID="Z07424761Y3CDV3OLV2IR"
 DOMAIN_NAME="tehith.online"
 
 for instance in $@
