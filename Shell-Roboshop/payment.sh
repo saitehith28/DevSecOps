@@ -55,6 +55,9 @@ VALIDATE $? "Unzipping shipping Code"
 pip3 install -r requirements.txt &>>$LOGS_FILE
 VALIDATE $? "Installing dependencies"
 
+cp $SCRIPT_DIR/payment.service /etc/systemd/system/payment.service
+VALIDATE $? "Created systemctl service"
+
 systemctl daemon-reload &>>$LOGS_FILE
 systemctl enable payment &>>$LOGS_FILE
 systemctl start payment &>>$LOGS_FILE
