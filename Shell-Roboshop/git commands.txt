@@ -1,0 +1,5 @@
+git clone https://github.com/saitehith28/DevSecOps.git
+
+cd DevSecOps
+
+cd Shell-Roboshop
