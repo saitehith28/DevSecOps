@@ -5,7 +5,7 @@ app_name=catalogue
 
 check_root
 app_setup
-nodejs_install
+nodejs_setup
 systemd_setup
 
 cp $SCRIPT_DIR/mongo.repo /etc/yum.repos.d/mongo.repo &>>$LOGS_FILE
