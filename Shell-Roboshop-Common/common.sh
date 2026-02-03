@@ -20,7 +20,7 @@ mkdir -p $LOGS_FOLDER
 echo "$(date "+%Y-%m-%d %H:%M:%S") | Script started executing at: $(date)" | tee -a $LOGS_FILE
 
 check_root(){
-    if [ $1 -ne 0 ]; then
+    if [ $USERID -ne 0 ]; then
         echo -e "$(date "+%Y-%m-%d %H:%M:%S") | $2 ... $R FAILURE $N" | tee -a $LOGS_FILE
         exit 1
     else
