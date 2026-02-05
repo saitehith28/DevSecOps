@@ -13,7 +13,7 @@ DEST_DIR=$2
 DAYS=${3:-14} #14 days is the default value, if the user not supplied
 
 log(){
-    echo -e "$(date +"%Y-%m-%d %H:%M:%S") | $1 | tee -a $LOGS_FILE"
+    echo -e "$(date +"%Y-%m-%d %H:%M:%S") | $1" | tee -a $LOGS_FILE
 }
 
 if [ $USERID -ne 0 ]; then
