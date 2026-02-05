@@ -16,4 +16,4 @@ N="\e[0m"
 while IFS= read -r line
 do
     echo "$line"
-done <./21-script1.sh
+done <<<./21-script1.sh
