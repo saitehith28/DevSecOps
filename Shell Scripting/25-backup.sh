@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 USERID=$(id -u)
 LOGS_FOLDER="/var/log/shell-roboshop"
@@ -10,7 +10,7 @@ N="\e[0m"
 
 SOURCE_DIR=$1
 DEST_DIR=$1
-DAYS=$(3:-14) #14 days is the default value, if the user not supplied
+DAYS=${3:-14} #14 days is the default value, if the user not supplied
 
 log(){
     echo -e "$(date +"%Y-%m-%d %H:%M:%S") | $1 | tee -a $LOGS_FILE"
