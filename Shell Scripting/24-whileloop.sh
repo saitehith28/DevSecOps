@@ -13,7 +13,7 @@ N="\e[0m"
 #     ((count++))
 # done
 
-while IFS=read -r line
+while IFS= read -r line
 do
     echo "$line"
 done <./21-script1.sh
