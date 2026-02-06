@@ -15,4 +15,4 @@ FINAL_MESSAGE=$(sed -e "s/TO_TEAM/$TO_TEAM/g" -e "s/ALERT_TYPE/$ALERT_TYPE/g" -e
     echo "Content-Type: text/html"
     echo ""
     echo "$FINAL_MESSAGE"
-} | "$TO_ADDRESS"
+} | msmtp "$TO_ADDRESS"
