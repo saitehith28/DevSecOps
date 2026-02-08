@@ -1,0 +1,4 @@
+- name: ping the server
+  host: web
+  tasks:
+  - name: ping the web server
