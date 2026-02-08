@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   
-  task:
+  tasks:
   - name: print variables
     ansible.builtin.debug:
       msg: "Course is {{COURSE}}"
