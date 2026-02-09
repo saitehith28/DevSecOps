@@ -6,3 +6,5 @@
   - name: print variables
     ansible.builtin.debug:
       msg: "Course is {{COURSE}}"
+
+      Hello
