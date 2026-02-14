@@ -78,3 +78,16 @@ Password:
 👉 Paste the token (not GitHub password)
 Press Enter.
 ✔ Repo will clone successfully.
+
+
+
+Username and Password asking everytime PULL
+
+Run the below commands:
+
+git config --global credential.helper store
+Enter Credentials
+git pull
+
+Now git pull - It wont ask you username and passowrd everytime
+
