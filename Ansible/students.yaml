@@ -1,0 +1,7 @@
+- name: "Tehith"
+  dob: "28-06-2002"
+  mobileNumber: 9121645842
+  addresses:
+  - flat: 240
+    street: "Gachibowli"
+    city: Hyd

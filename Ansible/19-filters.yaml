@@ -1,0 +1,61 @@
+- name: demo on filters
+  hosts: local
+  connection: local
+  vars:
+    topics: Linux, Shell, Ansible, Terraform
+    course: "DevSecOps with AWS"
+    myIP: "192.168.30.10"
+    tagsMap:
+      name: Ansible
+      project: Roboshop
+      component: catalogue
+    tagsList: [
+      {
+        "key": "Name",
+        "value":"Ansible"
+      },
+      {
+        "key":"Project",
+        "value":"Roboshop"
+      },
+      {
+        "key":"Component",
+        "value":"Catalogue"
+      }
+    ]
+  tasks:
+  - name: greeting
+    ansible.builtin.debug:
+      msg: "Hi Tehith, {{ GREETING | default('Good Morning')}}"
+  
+  - name: Convert String to List
+    ansible.builtin.debug:
+      msg: "{{ topics | split(',') }}"
+  
+  - name: Convert Map to List
+    ansible.builtin.debug:
+      msg: "{{ tagsMap | dict2items }}"
+
+  - name: Convert List to Map
+    ansible.builtin.debug:
+      msg: "{{ tagsList | items2dict }}"
+
+  - name: Read students yaml
+    ansible.builtin.set_fact:
+      student_yaml: "{{ lookup('file','students.yaml') | from_yaml}}"
+   
+  - name: Convert YAML to JSON
+    ansible.builtin.debug:
+      msg: "{{ student_yaml | to_nice_json }}"
+
+  - name: Convert to Upper Case
+    ansible.builtin.debug:
+      msg: "{{ course | upper }}"
+
+  - name: Convert to Lower Case
+    ansible.builtin.debug:
+      msg: "{{ course | lower }}"
+
+  - name: Check IPv4
+    ansible.builtin.debug:
+      msg: "{{ myIP | ansible.utils.ipv4 }}"
