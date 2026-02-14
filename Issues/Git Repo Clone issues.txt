@@ -1,0 +1,80 @@
+❓ Why HTTPS login failed
+When you used:
+git clone https://github.com/saitehith28/DevSecOps.git
+
+It asked:
+Username:
+Password:
+
+You entered your GitHub password.
+❌ It failed because GitHub does not allow password login for Git anymore.
+Now GitHub only accepts:
+👉 Personal Access Token (PAT) instead of password.
+
+❓ Why SSH failed
+When you used:
+git clone git@github.com:saitehith28/DevSecOps.git
+
+It failed because:
+	•	SSH needs a key
+	•	Your EC2 did not have SSH key added to GitHub
+So GitHub rejected it.
+
+✅ Why It Worked After Creating Token
+You created a token Then used it as password
+✔ GitHub accepted it ✔ Repo cloned
+
+🔑 Final Simple Rule
+	•	GitHub password ❌ not allowed
+	•	SSH without key ❌ not allowed
+	•	HTTPS + Token ✅ works
+That’s it 👍
+
+give steps to create toeken also
+
+Sure 👍 very simple steps.
+
+✅ Steps to Create GitHub Token (PAT)
+1️⃣ Open GitHub Settings
+Go to:
+https://github.com/settings/tokens
+
+
+2️⃣ Click
+👉 Generate new token (classic)
+
+3️⃣ Fill Details
+	•	Note:       ec2-access             
+	•	Expiration: Choose 30 days (or as you want)
+	•	Scopes: ✅ Select repo
+(That is enough for cloning.)
+
+4️⃣ Click
+👉 Generate token
+
+5️⃣ Copy the Token Immediately
+⚠️ Important:
+	•	You will see the token only once.
+	•	Copy and save it somewhere safe.
+
+✅ Now Clone Using Token
+In EC2 run:
+
+
+git clone https://github.com/saitehith28/DevSecOps.git
+
+When it asks:
+
+Username:
+
+Type:
+saitehith28
+
+When it asks:
+
+
+Password:
+
+👉 Paste the token (not GitHub password)
+Press Enter.
+✔ Repo will clone successfully.
