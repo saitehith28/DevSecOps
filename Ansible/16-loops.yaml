@@ -1,1 +1,11 @@
-- name: command module test
+- name: demo on loops
+  hosts: local
+  connection: local
+  tasks:
+  - name: print names
+    ansible.builtin.debug:
+      msg: "Hello {{ item }}"
+    loop:
+    - Taduka
+    - Sai
+    - Tehith
