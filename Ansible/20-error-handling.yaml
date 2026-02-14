@@ -4,8 +4,9 @@
   become: yes
   tasks:
   - name: check iuser exist or not
-    ansible.builtin.debug:
+    ansible.builtin.command: id roboshop
     register: user_output
+
   - name: print the output
     ansible.builtin.debug:
       msg: "{{ user_output }}"
