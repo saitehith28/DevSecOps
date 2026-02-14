@@ -6,7 +6,7 @@
   - name: check iuser exist or not
     ansible.builtin.command: id roboshop
     register: user_output
-    ignore-erros: true
+    ignore_erros: true
 
   - name: print the output
     ansible.builtin.debug:
