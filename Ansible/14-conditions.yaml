@@ -5,3 +5,13 @@
   - name: print facts
     ansible.builtin.debug:
       msg: "{{ ansible_facts }}"
+
+  - name: check redhat or not
+    ansible.builtin.debug:
+      msg: "Yes, package manager is Redhat"
+    when: ansible_facts.os_famili == "Redhat"
+  
+  - name: check redhat or not
+    ansible.builtin.debug:
+      msg: "Yes, package manager is Debian"
+    when: ansible_facts.os_famili == "Debian"
