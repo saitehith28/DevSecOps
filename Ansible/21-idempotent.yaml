@@ -1,0 +1,7 @@
+- name: check idempotency
+  hosts: local
+  connection: local
+  tasks:
+  - name: user creation
+    ansible.builtin.users:
+      name: tehith
