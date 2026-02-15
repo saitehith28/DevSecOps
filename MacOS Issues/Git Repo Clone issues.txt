@@ -93,3 +93,4 @@ Now git pull - It wont ask you username and passowrd everytime
 
 You can verify using cat ~/.git-credentials
 
+Token: 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
