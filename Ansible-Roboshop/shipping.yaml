@@ -77,7 +77,7 @@
       name: all
       login_host: "{{ MYSQL_HOST }}"
       login_user: root
-      login_password: Roboshop@1
+      login_password: RoboShop@1
       target: "{{ item }}"
     loop:
     - /app/db/schema.sql
