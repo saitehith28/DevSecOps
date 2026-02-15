@@ -39,7 +39,7 @@
       dest: /tmp/user.zip
 
   - name: Unarchive user
-    ansible.builtin.Unarchive:
+    ansible.builtin.unarchive:
       src: /tmp/user.zip
       dest: /app
       rempte_src: yes
