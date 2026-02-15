@@ -39,10 +39,10 @@
       dest: /tmp/shipping.zip
 
   - name: Unarchive shipping
-    ansible.builtin.Unarchive:
+    ansible.builtin.unarchive:
       src: /tmp/shipping.zip
       dest: /app
-      rempte_src: yes
+      remote_src: yes
   
   - name: install dependencies
     ansible.builtin.command: mvn clean package
