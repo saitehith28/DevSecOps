@@ -45,7 +45,7 @@
       rempte_src: yes
   
   - name: install dependencies
-    community.general.np:
+    community.general.npm:
       path: /app
 
   - name: copy user service
