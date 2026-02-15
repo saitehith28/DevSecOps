@@ -1,14 +1,15 @@
-- name: configure user
-  hosts: user
+- name: configure payment server
+  hosts: payment
   become: yes
   tasks:
-  - name: enable nodejs 20
-    ansible.builtin.command: dnf module enable nodejs:20 -yes
-
-  - name: install nodejs
+  - name: install python
     ansible.builtin.dnf:
-      name: nodejs
+      name: "{{ item }}"
       state: present
+    loop:
+    - python3
+    - gcc
+    - python3-devel
 
   - name: create system user roboshop
     ansible.builtin.user:
@@ -28,37 +29,40 @@
       path: /app
       state: directory
 
-  - name: Delete user Zip File
+  - name: Delete payment Zip File
     ansible.builtin.file:
-      path: /tmp/user.zip
+      path: /tmp/payment.zip
       state: absent
 
-  - name: Download user Zip File
+  - name: Download payment Zip File
     ansible.builtin.get_url:
-      url: https://roboshop-artifacts.s3.amazonaws.com/user-v3.zip
-      dest: /tmp/user.zip
+      url: https://roboshop-artifacts.s3.amazonaws.com/payment-v3.zip
+      dest: /tmp/payment.zip
 
-  - name: Unarchive user
+  - name: Unarchive payment
     ansible.builtin.Unarchive:
-      src: /tmp/user.zip
+      src: /tmp/payment.zip
       dest: /app
       rempte_src: yes
   
   - name: install dependencies
-    community.general.np:
-      path: /app
+    ansible.builtin.pip:
+      requirements: requirements.txt
+      executable: pip3.9
+    args:
+      chdir: /app
 
-  - name: copy user service
+  - name: copy payment service
     ansible.builtin.copy:
-      src: user.service
-      dest: /etc/systemd/system/user.service
+      src: payment.service
+      dest: /etc/systemd/system/payment.service
 
   - name: daemon reload
     ansible.builtin.systemd_service:
       daemon_reload: true
-      
-  - name: start user
+
+  - name: start payment
     ansible.builtin.service:
-      name: user
+      name: payment
       state: restarted
       enabled: yes
