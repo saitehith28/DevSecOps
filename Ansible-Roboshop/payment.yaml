@@ -40,10 +40,10 @@
       dest: /tmp/payment.zip
 
   - name: Unarchive payment
-    ansible.builtin.Unarchive:
+    ansible.builtin.unarchive:
       src: /tmp/payment.zip
       dest: /app
-      rempte_src: yes
+      remote_src: yes
   
   - name: install dependencies
     ansible.builtin.pip:
