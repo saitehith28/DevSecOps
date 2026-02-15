@@ -27,7 +27,7 @@
     dest: /tmp/{{ component }}.zip
 
 - name: Unarchive {{ component }}
-  ansible.builtin.Unarchive:
+  ansible.builtin.unarchive:
     src: /tmp/{{ component }}.zip
     dest: /app
-    rempte_src: yes
+    remote_src: yes

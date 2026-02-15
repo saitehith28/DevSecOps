@@ -14,7 +14,7 @@
     tasks_from: systemd-setup.yaml
 
 - name: copy mongo repo
-  ansible.builtin.cop:
+  ansible.builtin.copy:
     src: mongo.repo
     dest: /etc/yum.repos.d/mongo.repo
 
