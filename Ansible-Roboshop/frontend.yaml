@@ -26,10 +26,10 @@
       dest: /tmp/frontend.zip
 
   - name: Unarchive frontend
-    ansible.builtin.Unarchive:
+    ansible.builtin.unarchive:
       src: /tmp/frontend.zip
       dest: /usr/share/nginx/html
-      rempte_src: yes
+      remote_src: yes
 
   - name: Remove default nginx
     ansible.builtin.file:
