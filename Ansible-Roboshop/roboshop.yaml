@@ -3,8 +3,8 @@
   hosts: all
   connection: localhost
   vars:
-    sg_id:
-    ami_id:
+    sg_id: sg-027741b89433f3f81
+    ami_id: ami-0220d79f3f480ecf5
     domain_name: tehith.online
     env: dev
     action: create
