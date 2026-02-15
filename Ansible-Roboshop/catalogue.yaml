@@ -39,13 +39,13 @@
       dest: /tmp/catalogue.zip
 
   - name: Unarchive Catalogue
-    ansible.builtin.Unarchive:
+    ansible.builtin.unarchive:
       src: /tmp/catalogue.zip
       dest: /app
       rempte_src: yes
   
   - name: install dependencies
-    community.general.np:
+    community.general.npm:
       path: /app
 
   - name: copy catalogue service
