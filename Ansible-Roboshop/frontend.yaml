@@ -41,9 +41,9 @@
       src: nginx.conf
       dest: /etc/nginx/nginx.conf
 
-  - name: start cart
+  - name: start nginx
     ansible.builtin.service:
-      name: cart
+      name: nginx
       state: restarted
       enabled: yes
 
