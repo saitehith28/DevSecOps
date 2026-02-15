@@ -71,21 +71,21 @@
     - cryptography
     - PyMySQL
 
-    - name: import shipping data
-      community.mysql.mysql_db:
-        state: import
-        name: all
-        login_host: "{{ MYSQL_HOST }}"
-        login_user: root
-        login_password: Roboshop@1
-        target: "{{ item }}"
-      loop:
-      - /app/db/schema.sql
-      - /app/db/app-user.sql
-      - /app/db/master-data.sql
+  - name: import shipping data
+    community.mysql.mysql_db:
+      state: import
+      name: all
+      login_host: "{{ MYSQL_HOST }}"
+      login_user: root
+      login_password: Roboshop@1
+      target: "{{ item }}"
+    loop:
+    - /app/db/schema.sql
+    - /app/db/app-user.sql
+    - /app/db/master-data.sql
 
-    - name: start shipping
-      ansible.builtin.service:
-        name: shipping
-        state: restarted
-        enabled: yes
+  - name: start shipping
+    ansible.builtin.service:
+      name: shipping
+      state: restarted
+      enabled: yes
