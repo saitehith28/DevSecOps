@@ -39,13 +39,13 @@
       dest: /tmp/cart.zip
 
   - name: Unarchive cart
-    ansible.builtin.Unarchive:
+    ansible.builtin.unarchive:
       src: /tmp/cart.zip
       dest: /app
-      rempte_src: yes
+      rem0te_src: yes
   
   - name: install dependencies
-    community.general.np:
+    community.general.npm:
       path: /app
 
   - name: copy cart service
