@@ -1,0 +1,32 @@
+#Create Ansible server and login using MobaXterm
+
+#Install Ansible
+sudo dnf install ansible -y
+
+#Configure AWS
+aws configure
+access key, secret key, region=us-east-1 - Refer Git Repo
+aws s3 ls - for verification
+
+#Install libraries
+pip3.9 install botocore boto3
+
+#Clone the Repo
+git clone https://github.com/saitehith28/DevSecOps.git
+
+#For creation
+
+ansible-playbook -i localhost, -e '{"instances": ["mongodb","catalogue","redis","user","cart","mysql","shipping","rabbitmq","payment","frontend"]}' roboshop.yaml
+
+or
+
+ansible-playbook -i localhost, -e "instances=['mongodb','catalogue','redis','user','cart','mysql','shipping','rabbitmq','payment','frontend']" roboshop.yaml
+
+
+#For Deletion
+
+ansible-playbook -i localhost, -e '{"instances": ["mongodb","catalogue","redis","user","cart","mysql","shipping","rabbitmq","payment","frontend"]}' -e action=destroy roboshop.yaml
+
+or
+
+ansible-playbook -i localhost, -e "instances=['mongodb','catalogue','redis','user','cart','mysql','shipping','rabbitmq','payment','frontend']" -e action=destroy roboshop.yaml
