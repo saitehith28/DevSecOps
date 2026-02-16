@@ -94,3 +94,6 @@ Now git pull - It wont ask you username and passowrd everytime
 You can verify using cat ~/.git-credentials
 
 Token: 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
+
+AWS Access Key: AKIAZH3H2I5G6YYNH2DY
+AWS Secret Key: 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

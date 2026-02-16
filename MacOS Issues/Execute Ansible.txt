@@ -1,0 +1,26 @@
+Install Ansible
+sudo dnf install ansible -y
+
+Configure AWS
+aws configure
+access key, secret key, region=us-east-1
+
+pip3.9 install botocore boto3
+
+
+#For creation
+
+ansible-playbook -i localhost, -e '{"instances": ["mongodb","catalogue","redis","user","cart","mysql","shipping","rabbitmq","payment","frontend"]}' roboshop.yaml
+
+or
+
+ansible-playbook -i localhost, -e "instances=['mongodb','catalogue','redis','user','cart','mysql','shipping','rabbitmq','payment','frontend']" roboshop.yaml
+
+
+#For Deletion
+
+# ansible-playbook -i localhost, -e '{"instances": ["mongodb","catalogue","redis","user","cart","mysql","shipping","rabbitmq","payment","frontend"]}' -e action=destroy roboshop.yaml
+
+or
+
+# ansible-playbook -i localhost, -e "instances=['mongodb','catalogue','redis','user','cart','mysql','shipping','rabbitmq','payment','frontend']" -e action=destroy roboshop.yaml
