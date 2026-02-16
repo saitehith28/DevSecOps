@@ -31,5 +31,38 @@ or
 
 ansible-playbook -i localhost, -e "instances=['mongodb','catalogue','redis','user','cart','mysql','shipping','rabbitmq','payment','frontend']" -e action=destroy roboshop.yaml
 
+
 #For mongodb
 ansible-playbook -i inventory.ini mongodb.yaml
+telnet mongodb-dev.tehith.online 27017
+
+ansible-playbook -e  component=mongodb roboshop.yaml
+telnet mongodb-dev.tehith.online 27017
+
+#For catalogue
+ansible-playbook -i inventory.ini catalogue.yaml
+curl http://catalogue-dev.tehith.online:8080/health
+
+ansible-playbook -e  component=catalogue roboshop.yaml
+curl http://catalogue-dev.tehith.online:8080/health
+
+#For redis
+ansible-playbook -i inventory.ini redis.yaml
+telnet redis-dev.tehith.online 6379
+
+ansible-playbook -e  component=redis roboshop.yaml
+telnet redis-dev.tehith.online 6379
+
+#For catalogue
+ansible-playbook -i inventory.ini user.yaml
+curl http://user-dev.tehith.online:8080/health
+
+ansible-playbook -e  component=user roboshop.yaml
+curl http://user-dev.tehith.online:8080/health
+
+#For cart
+ansible-playbook -i inventory.ini cart.yaml
+curl http://cart-dev.tehith.online:8080/health
+
+ansible-playbook -e  component=cart roboshop.yaml
+curl http://cart-dev.tehith.online:8080/health
