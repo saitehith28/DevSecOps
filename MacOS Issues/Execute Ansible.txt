@@ -1,3 +1,5 @@
+Create Ansible server and login using MobaXterm
+
 Install Ansible
 sudo dnf install ansible -y
 
