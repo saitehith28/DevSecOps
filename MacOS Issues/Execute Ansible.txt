@@ -5,7 +5,7 @@ sudo dnf install ansible -y
 
 Configure AWS
 aws configure
-access key, secret key, region=us-east-1
+access key, secret key, region=us-east-1 - Refer Git Repo
 
 pip3.9 install botocore boto3
 
