@@ -1,0 +1,11 @@
+ansible_user: ec2-user
+ansible_password: DevOps321
+MONGODB_HOST: mongodb-dev.tehith.online
+CATALOGUE_HOST: catalogue-dev.tehith.online
+REDIS_HOST: redis-dev.tehith.online
+USER_HOST: user-dev.tehith.online
+CART_HOST: cart-dev.tehith.online
+MYSQL_HOST: mysql-dev.tehith.online
+SHIPPING_HOST: shipping-dev.tehith.online
+RABBITMQ_HOST: rabbitmq-dev.tehith.online
+PAYMENT_HOST: payment-dev.tehith.online
