@@ -108,5 +108,8 @@ ansible-playbook -i inventory.ini frontend.yaml
 
 ansible-playbook -e  component=frontend roboshop.yaml
 
+Go to browserhttp://roboshop-dev.tehith.online
+
+
 
 Ctrl + ] and type quit to exit -> In telnet
