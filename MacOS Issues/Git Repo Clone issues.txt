@@ -21,8 +21,8 @@ It failed because:
 So GitHub rejected it.
 
 ✅ Why It Worked After Creating Token
-You created a token Then used it as password
-✔ GitHub accepted it ✔ Repo cloned
+You created a tokenThen used it as password
+✔ GitHub accepted it✔ Repo cloned
 
 🔑 Final Simple Rule
 	•	GitHub password ❌ not allowed
@@ -44,9 +44,9 @@ https://github.com/settings/tokens
 👉 Generate new token (classic)
 
 3️⃣ Fill Details
-	•	Note:       ec2-access             
-	•	Expiration: Choose 30 days (or as you want)
-	•	Scopes: ✅ Select repo
+	•	Note:ec2-access
+	•	Expiration:Choose 30 days (or as you want)
+	•	Scopes:✅ Select repo
 (That is enough for cloning.)
 
 4️⃣ Click
