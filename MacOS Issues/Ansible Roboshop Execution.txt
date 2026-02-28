@@ -117,3 +117,4 @@ Ctrl + ] and type quit to exit -> In telnet
 
 For Ansible-Roboshop-Roles execution
 Run the create command by going to Ansible-ROboshop only, because ec2 creation and R53 is there in ANsible-Roboshop only
+Go to Ansible-Roboshop-Roles and run the above commands
