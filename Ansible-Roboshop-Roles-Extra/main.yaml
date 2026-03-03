@@ -3,3 +3,5 @@
   connection: local
   roles:
   - demo
+
+#This is just demo file, no connection with Roboshop project
