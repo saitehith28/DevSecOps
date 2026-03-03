@@ -9,3 +9,15 @@
 - name: message 3
   ansible.builtin.debug:
     msg: "Hi from MSG-3"
+
+# - name: message 1
+#   ansible.builtin.debug:
+#     msg: "Hi from MSG-1"
+
+# - name: message 2
+#   ansible.builin.debug:
+#     msg: "Hi from MSG-2"
+
+# - name: message 3
+#   ansible.builtin.debug:
+#     msg: "Hi from MSG-3"
