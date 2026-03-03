@@ -5,6 +5,9 @@
     name: common
     tasks_from: include-vs-import.yaml
   when: os=="RedHat"
+  loop:
+  - Sai
+  - Tehith
 
 #----Third using Debian----
 # - name: call common role
