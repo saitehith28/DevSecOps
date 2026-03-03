@@ -1,3 +1,21 @@
+#----Third using Debian----
+# - name: message 1
+#   ansible.builtin.debug:
+#     msg: "Hi from MSG-1"
+
+# - name: set the os fact
+#   ansible.builtin.set_fact:
+#     os: "debian"
+
+# - name: message 2
+#   ansible.builtin.debug:
+#     msg: "Hi from MSG-2"
+
+# - name: message 3
+#   ansible.builtin.debug:
+#     msg: "Hi from MSG-3"
+
+#----Second using when----
 - name: message 1
   ansible.builtin.debug:
     msg: "Hi from MSG-1"
@@ -10,6 +28,7 @@
   ansible.builtin.debug:
     msg: "Hi from MSG-3"
 
+#----First----
 # - name: message 1
 #   ansible.builtin.debug:
 #     msg: "Hi from MSG-1"

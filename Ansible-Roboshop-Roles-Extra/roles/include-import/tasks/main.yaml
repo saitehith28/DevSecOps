@@ -1,3 +1,12 @@
+# #----Third using Debian----
+# - name: call common role
+#   # ansible.builtin.import_role:
+#   ansible.builtin.include_role:
+#     name: common
+#     tasks_from: include-vs-import.yaml
+#   when: os=="RedHat"
+
+#----Second using when----
 - name: call common role
   # ansible.builtin.import_role:
   ansible.builtin.include_role:
@@ -5,6 +14,7 @@
     tasks_from: include-vs-import.yaml
   when: os=="RedHat"
 
+#----First----
 # - name: call common role
 #   ansible.builtin.import_role:
 #   # ansible.builtin.include_role:
