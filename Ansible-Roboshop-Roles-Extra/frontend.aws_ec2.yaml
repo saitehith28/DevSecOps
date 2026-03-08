@@ -3,6 +3,6 @@ regions:
 - us-east-1
 hostnames:
 - private-ip-address
-# filters:
-#   instance-state-name: running
-#   tag:Name: frontend-dev
+filters:
+  instance-state-name: running
+  tag:Name: frontend-dev
