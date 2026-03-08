@@ -106,8 +106,10 @@ curl http://payment-dev.tehith.online:8080/health
 
 #For frontend
 ansible-playbook -i inventory.ini frontend.yaml
+curl http://frontend-dev.tehith.online
 
 ansible-playbook -e  component=frontend roboshop.yaml
+curl http://frontend-dev.tehith.online
 
 Go to browser http://roboshop-dev.tehith.online
 
