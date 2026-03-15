@@ -1,0 +1,3 @@
+Ansible and Node are created using Amazon default AMI using daws-88s key.
+Changed the permissions of the daws-88s file in mac as I was not able to connect
+saitehithtaduka@Mac Linux % chmod 400 daws-88s
