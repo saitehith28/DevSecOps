@@ -57,7 +57,7 @@ ansible-playbook -e  component=redis roboshop.yaml
 telnet redis-dev.tehith.online 6379
 
 
-#For catalogue
+#For user
 ansible-playbook -i inventory.ini user.yaml
 curl http://user-dev.tehith.online:8080/health
 
