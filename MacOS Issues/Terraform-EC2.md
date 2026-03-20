@@ -68,10 +68,4 @@ yes
 - EC2 instance will be created using Terraform  
 - Terraform is executed from inside EC2  
 
----
-
-## Notes
-
-- IAM Role is preferred over `aws configure`  
-- Avoid storing access keys inside EC2  
-- Common approach in DevOps and CI/CD pipelines  
+--- 
