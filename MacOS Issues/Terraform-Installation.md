@@ -52,8 +52,12 @@ Install Homebrew:
 Install Terraform:
 ```bash
 brew tap hashicorp/tap
+```
+
+```bash
 brew install hashicorp/tap/terraform
 ```
+
 
 Verify:
 ```bash
