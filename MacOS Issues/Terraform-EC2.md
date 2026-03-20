@@ -43,46 +43,11 @@ terraform -version
 
 ---
 
-## Step 5: Configure AWS (Recommended: IAM Role)
-
-### Attach IAM Role to EC2
-- Go to EC2 → Instance → Actions → Security → Modify IAM Role  
-- Attach role with required permissions (e.g., EC2 access)
-
-### Verify
-
+## Step 4: Configure AWS
 ```bash
-aws sts get-caller-identity
+aws configure
 ```
-
----
-
-## Step 6: Create Terraform File
-
-```bash
-vi main.tf
-```
-
-Paste:
-
-```hcl
-provider "aws" {
-  region = "ap-south-1"
-}
-
-resource "aws_instance" "example" {
-  ami           = "ami-0f5ee92e2d63afc18"
-  instance_type = "t2.micro"
-
-  tags = {
-    Name = "Terraform-EC2"
-  }
-}
-```
-
----
-
-## Step 7: Run Terraform
+## Step 6: Run Terraform
 
 ```bash
 terraform init
