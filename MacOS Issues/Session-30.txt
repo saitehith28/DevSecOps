@@ -4,3 +4,1337 @@ saitehithtaduka@Mac Linux % chmod 400 daws-88s
 
 Created Node using Amazon AMI and with daws-88s key.
 Created Ansible using Amazon AMI and without key.
+
+
+
+GitBash
+----------
+Last login: Fri Mar 20 11:44:10 on ttys001
+saitehithtaduka@Mac ~ % cd Tehith/DevSecOps/Linux
+saitehithtaduka@Mac Linux % ls
+Expense Application Setup Guide.pdf	session-02.txt
+daws-88s				tehith
+daws-88s.pub				tehith.pub
+linux-practice
+saitehithtaduka@Mac Linux % ssh -i tehith ec2-user@100.52.233.201
+The authenticity of host '100.52.233.201 (100.52.233.201)' can't be established.
+ED25519 key fingerprint is SHA256:RS0X9kX0z68oo+1U/MHXqclB1EpKa7fqpxQDZVE2isc.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '100.52.233.201' (ED25519) to the list of known hosts.
+ec2-user@100.52.233.201: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
+saitehithtaduka@Mac Linux % ssh -i daws-88s ec2-user@100.52.233.201
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+[ec2-user@ip-172-31-17-168 ~]$ exit
+logout
+Connection to 100.52.233.201 closed.
+saitehithtaduka@Mac Linux % cat daws-88s             
+-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+QyNTUxOQAAACB7QOFlha9AwaH12j1IAYi0uNrQkKPjmZbDVf6qINd4+QAAAKAaU4PoGlOD
+6AAAAAtzc2gtZWQyNTUxOQAAACB7QOFlha9AwaH12j1IAYi0uNrQkKPjmZbDVf6qINd4+Q
+AAAECH+MHt6+X9qtbwtdF/GdnWs2k02c9GY8Z6RUon5B0ulHtA4WWFr0DBofXaPUgBiLS4
+2tCQo+OZlsNV/qog13j5AAAAFlRlaGl0aEBERVNLVE9QLThCVk8xNFMBAgMEBQYH
+-----END OPENSSH PRIVATE KEY-----
+saitehithtaduka@Mac Linux % ssh -i daws-88s ec2-user@100.52.233.201
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+Last login: Fri Mar 20 06:17:41 2026 from 152.59.199.187
+[ec2-user@ip-172-31-17-168 ~]$ exit
+logout
+Connection to 100.52.233.201 closed.
+saitehithtaduka@Mac Linux % cat daws-88s
+-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+QyNTUxOQAAACB7QOFlha9AwaH12j1IAYi0uNrQkKPjmZbDVf6qINd4+QAAAKAaU4PoGlOD
+6AAAAAtzc2gtZWQyNTUxOQAAACB7QOFlha9AwaH12j1IAYi0uNrQkKPjmZbDVf6qINd4+Q
+AAAECH+MHt6+X9qtbwtdF/GdnWs2k02c9GY8Z6RUon5B0ulHtA4WWFr0DBofXaPUgBiLS4
+2tCQo+OZlsNV/qog13j5AAAAFlRlaGl0aEBERVNLVE9QLThCVk8xNFMBAgMEBQYH
+-----END OPENSSH PRIVATE KEY-----
+saitehithtaduka@Mac Linux % cat daws-88s.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHtA4WWFr0DBofXaPUgBiLS42tCQo+OZlsNV/qog13j5 Tehith@DESKTOP-8BVO14S
+saitehithtaduka@Mac Linux % ssh -i daws-88s ec2-user@100.52.233.201
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+Last login: Fri Mar 20 06:23:16 2026 from 152.59.199.187
+[ec2-user@ip-172-31-17-168 ~]$ ssh-keygen -t rsa -f ansible
+Generating public/private rsa key pair.
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in ansible
+Your public key has been saved in ansible.pub
+The key fingerprint is:
+SHA256:/7YNNGAZkkp4wCXfbJISLV8mS43slTvqc3qCrIN6A6I ec2-user@ip-172-31-17-168.ec2.internal
+The key's randomart image is:
++---[RSA 3072]----+
+|   .+*.o.o.      |
+|    ++O+B. o     |
+|    .B+B+.+      |
+|     .=oo. .     |
+|       .S.  o    |
+|o     .  . . .   |
+|oo . o    . .    |
+|E + o + o  ..o   |
+|o..+  .*   .o..  |
++----[SHA256]-----+
+[ec2-user@ip-172-31-17-168 ~]$ ls -l
+total 8
+-rw-------. 1 ec2-user ec2-user 2635 Mar 20 06:24 ansible
+-rw-r--r--. 1 ec2-user ec2-user  592 Mar 20 06:24 ansible.pub
+[ec2-user@ip-172-31-17-168 ~]$ sudo su -
+[root@ip-172-31-17-168 ~]# cd /home/ansible
+-bash: cd: /home/ansible: No such file or directory
+[root@ip-172-31-17-168 ~]# cd home/ansible
+-bash: cd: home/ansible: No such file or directory
+[root@ip-172-31-17-168 ~]# exit
+logout
+[ec2-user@ip-172-31-17-168 ~]$ sudo useradd ansible
+[ec2-user@ip-172-31-17-168 ~]$ sudo su -
+Last login: Fri Mar 20 06:24:52 UTC 2026 on pts/1
+[root@ip-172-31-17-168 ~]# cd /home/ansible
+[root@ip-172-31-17-168 ansible]# ls -la
+total 12
+drwx------. 2 ansible ansible  62 Mar 20 06:25 .
+drwxr-xr-x. 4 root    root     37 Mar 20 06:25 ..
+-rw-r--r--. 1 ansible ansible  18 Jan 28  2023 .bash_logout
+-rw-r--r--. 1 ansible ansible 141 Jan 28  2023 .bash_profile
+-rw-r--r--. 1 ansible ansible 492 Jan 28  2023 .bashrc
+[root@ip-172-31-17-168 ansible]# mkdir .ssh
+[root@ip-172-31-17-168 ansible]# ls -l
+total 0
+[root@ip-172-31-17-168 ansible]# ls -la
+total 12
+drwx------. 3 ansible ansible  74 Mar 20 06:26 .
+drwxr-xr-x. 4 root    root     37 Mar 20 06:25 ..
+-rw-r--r--. 1 ansible ansible  18 Jan 28  2023 .bash_logout
+-rw-r--r--. 1 ansible ansible 141 Jan 28  2023 .bash_profile
+-rw-r--r--. 1 ansible ansible 492 Jan 28  2023 .bashrc
+drwxr-xr-x. 2 root    root      6 Mar 20 06:26 .ssh
+[root@ip-172-31-17-168 ansible]# chmod -R 700 .ssh
+[root@ip-172-31-17-168 ansible]# ls -la
+total 12
+drwx------. 3 ansible ansible  74 Mar 20 06:26 .
+drwxr-xr-x. 4 root    root     37 Mar 20 06:25 ..
+-rw-r--r--. 1 ansible ansible  18 Jan 28  2023 .bash_logout
+-rw-r--r--. 1 ansible ansible 141 Jan 28  2023 .bash_profile
+-rw-r--r--. 1 ansible ansible 492 Jan 28  2023 .bashrc
+drwx------. 2 root    root      6 Mar 20 06:26 .ssh
+[root@ip-172-31-17-168 ansible]# cd .ssh
+[root@ip-172-31-17-168 .ssh]# touch authorized_keys
+[root@ip-172-31-17-168 .ssh]# exit
+logout
+[ec2-user@ip-172-31-17-168 ~]$ cat ansible.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCudGNUqg/WzV0Fz/LnYpVk4jFHuy21E0vfy9q9GTzA97Wue2/IIynFdxZbd838EcMsHlFsPwSdzmE8ZWWa8s8JX/I12DwOInBqjcVv8vxEbYNZXXUADUadkFJhZUXgp+GmM5HSzbHrrbERFXOTQLK7l5RDsdI7hVlM2ZBC+9qPmSyWOpAGHp4amv/n+gmbMXyp/okVIOZAgzM1qLCoxI6iRNn4zxKMNxuWqRHn6TGYZWFb+rWWjAVhQNQyVVxMaWzXq+CdX05ekGevYa2qHTLdZEhaxul40rgI8fgY23Abj8LSQ+ZGlsoRnO/jirrWcSC05IkLJqZXr3AeFilnXRMOWlrGXqv5QCNMfUxsIWGd+/hAlumudAoq/lHXvFMysssUKORbVmUWV9kT+ePfabZ8o4LJxozj+hXsfvsELu1KGZCRIjDfILHpl3k8w1Ci7qZcxIgoRAcwE5WTBoj4Yzj7cI3RWxTheLoB721o/Ar5rqt94Cnd5QgZQMXWdTW4zLE= ec2-user@ip-172-31-17-168.ec2.internal
+[ec2-user@ip-172-31-17-168 ~]$ sudo su -
+Last login: Fri Mar 20 06:25:44 UTC 2026 on pts/1
+[root@ip-172-31-17-168 ~]# cd /home/ansible
+[root@ip-172-31-17-168 ansible]# cd .ssh
+[root@ip-172-31-17-168 .ssh]# vim authorized_keys 
+[root@ip-172-31-17-168 .ssh]# ls -la
+total 4
+drwx------. 2 root    root     29 Mar 20 06:27 .
+drwx------. 3 ansible ansible  74 Mar 20 06:26 ..
+-rw-r--r--. 1 root    root    592 Mar 20 06:27 authorized_keys
+[root@ip-172-31-17-168 .ssh]# chmod 600 authorized_keys 
+[root@ip-172-31-17-168 .ssh]# ls -la
+total 4
+drwx------. 2 root    root     29 Mar 20 06:27 .
+drwx------. 3 ansible ansible  74 Mar 20 06:26 ..
+-rw-------. 1 root    root    592 Mar 20 06:27 authorized_keys
+[root@ip-172-31-17-168 .ssh]# chown ansible:ansible authorized_keys
+[root@ip-172-31-17-168 .ssh]# ls -la
+total 4
+drwx------. 2 root    root     29 Mar 20 06:27 .
+drwx------. 3 ansible ansible  74 Mar 20 06:26 ..
+-rw-------. 1 ansible ansible 592 Mar 20 06:27 authorized_keys
+[root@ip-172-31-17-168 .ssh]# cd ..
+[root@ip-172-31-17-168 ansible]# ls -la
+total 12
+drwx------. 3 ansible ansible  74 Mar 20 06:26 .
+drwxr-xr-x. 4 root    root     37 Mar 20 06:25 ..
+-rw-r--r--. 1 ansible ansible  18 Jan 28  2023 .bash_logout
+-rw-r--r--. 1 ansible ansible 141 Jan 28  2023 .bash_profile
+-rw-r--r--. 1 ansible ansible 492 Jan 28  2023 .bashrc
+drwx------. 2 root    root     29 Mar 20 06:27 .ssh
+[root@ip-172-31-17-168 ansible]# chown ansible:ansible -R .ssh
+[root@ip-172-31-17-168 ansible]# ls -la
+total 12
+drwx------. 3 ansible ansible  74 Mar 20 06:26 .
+drwxr-xr-x. 4 root    root     37 Mar 20 06:25 ..
+-rw-r--r--. 1 ansible ansible  18 Jan 28  2023 .bash_logout
+-rw-r--r--. 1 ansible ansible 141 Jan 28  2023 .bash_profile
+-rw-r--r--. 1 ansible ansible 492 Jan 28  2023 .bashrc
+drwx------. 2 ansible ansible  29 Mar 20 06:27 .ssh
+[root@ip-172-31-17-168 ansible]# exit
+logout
+[ec2-user@ip-172-31-17-168 ~]$ sudo su -
+Last login: Fri Mar 20 06:27:06 UTC 2026 on pts/1
+[root@ip-172-31-17-168 ~]# cd /home/ansible
+[root@ip-172-31-17-168 ansible]# ls -la
+total 12
+drwx------. 3 ansible ansible  74 Mar 20 06:26 .
+drwxr-xr-x. 4 root    root     37 Mar 20 06:25 ..
+-rw-r--r--. 1 ansible ansible  18 Jan 28  2023 .bash_logout
+-rw-r--r--. 1 ansible ansible 141 Jan 28  2023 .bash_profile
+-rw-r--r--. 1 ansible ansible 492 Jan 28  2023 .bashrc
+drwx------. 2 ansible ansible  29 Mar 20 06:27 .ssh
+[root@ip-172-31-17-168 ansible]# cd .ansible
+-bash: cd: .ansible: No such file or directory
+[root@ip-172-31-17-168 ansible]# ls -la
+total 12
+drwx------. 3 ansible ansible  74 Mar 20 06:26 .
+drwxr-xr-x. 4 root    root     37 Mar 20 06:25 ..
+-rw-r--r--. 1 ansible ansible  18 Jan 28  2023 .bash_logout
+-rw-r--r--. 1 ansible ansible 141 Jan 28  2023 .bash_profile
+-rw-r--r--. 1 ansible ansible 492 Jan 28  2023 .bashrc
+drwx------. 2 ansible ansible  29 Mar 20 06:27 .ssh
+[root@ip-172-31-17-168 ansible]# exit
+logout
+[ec2-user@ip-172-31-17-168 ~]$ sudo su -
+Last login: Fri Mar 20 06:28:59 UTC 2026 on pts/1
+[root@ip-172-31-17-168 ~]# cd /home/ansible
+[root@ip-172-31-17-168 ansible]# ls -la
+total 12
+drwx------. 3 ansible ansible  74 Mar 20 06:26 .
+drwxr-xr-x. 4 root    root     37 Mar 20 06:25 ..
+-rw-r--r--. 1 ansible ansible  18 Jan 28  2023 .bash_logout
+-rw-r--r--. 1 ansible ansible 141 Jan 28  2023 .bash_profile
+-rw-r--r--. 1 ansible ansible 492 Jan 28  2023 .bashrc
+drwx------. 2 ansible ansible  29 Mar 20 06:27 .ssh
+[root@ip-172-31-17-168 ansible]# cd .ssh
+[root@ip-172-31-17-168 .ssh]# ls -la
+total 4
+drwx------. 2 ansible ansible  29 Mar 20 06:27 .
+drwx------. 3 ansible ansible  74 Mar 20 06:26 ..
+-rw-------. 1 ansible ansible 592 Mar 20 06:27 authorized_keys
+[root@ip-172-31-17-168 .ssh]# exit
+logout
+[ec2-user@ip-172-31-17-168 ~]$ ls -la
+total 24
+drwx------. 3 ec2-user ec2-user  129 Mar 20 06:24 .
+drwxr-xr-x. 4 root     root       37 Mar 20 06:25 ..
+-rw-------. 1 ec2-user ec2-user    5 Mar 20 06:18 .bash_history
+-rw-r--r--. 1 ec2-user ec2-user   18 Jan 28  2023 .bash_logout
+-rw-r--r--. 1 ec2-user ec2-user  141 Jan 28  2023 .bash_profile
+-rw-r--r--. 1 ec2-user ec2-user  492 Jan 28  2023 .bashrc
+drwx------. 2 ec2-user ec2-user   29 Mar 20 06:14 .ssh
+-rw-------. 1 ec2-user ec2-user 2635 Mar 20 06:24 ansible
+-rw-r--r--. 1 ec2-user ec2-user  592 Mar 20 06:24 ansible.pub
+[ec2-user@ip-172-31-17-168 ~]$ cat ansible
+-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABlwAAAAdzc2gtcn
+NhAAAAAwEAAQAAAYEArnRjVKoP1s1dBc/y52KVZOIxR7sttRNL38vavRk8wPe1rntvyCMp
+xXcWW3fN/BHDLB5RbD8Enc5hPGVlmvLPCV/yNdg8DiJwao3Fb/L8RG2DWV11AA1GnZBSYW
+VF4KfhpjOR0s2x662xERVzk0Cyu5eUQ7HSO4VZTNmQQvvaj5ksljqQBh6eGpr/5/oJmzF8
+qf6JFSDmQIMzNaiwqMSOokTZ+M8SjDcblqkR5+kxmGVhW/q1lowFYUDUMlVcTGls16vgnV
+9OXpBnr2Gtqh0y3WRIWsbpeNK4CPH4GNtwG4/C0kPmRpbKEZzv44q61nEgtOSJCyamV69w
+HhYpZ10TDlpaxl6r+UAjTH1MbCFhnfv4QJbprnQKKv5R17xTMrLLFCjkW1ZlFlfZE/nj32
+m2fKOCycaM4/oV7H77BC7tShmQkSIw3yCx6Zd5PMNQou6mXMSIKEQHMBOVkwaI+GM4+3CN
+0VsU4Xi6Ae9taPwK+a6rfeAp3eUIGUDF1nU1uMyxAAAFoMI9fm3CPX5tAAAAB3NzaC1yc2
+EAAAGBAK50Y1SqD9bNXQXP8udilWTiMUe7LbUTS9/L2r0ZPMD3ta57b8gjKcV3Flt3zfwR
+wyweUWw/BJ3OYTxlZZryzwlf8jXYPA4icGqNxW/y/ERtg1lddQANRp2QUmFlReCn4aYzkd
+LNseutsREVc5NAsruXlEOx0juFWUzZkEL72o+ZLJY6kAYenhqa/+f6CZsxfKn+iRUg5kCD
+MzWosKjEjqJE2fjPEow3G5apEefpMZhlYVv6tZaMBWFA1DJVXExpbNer4J1fTl6QZ69hra
+odMt1kSFrG6XjSuAjx+BjbcBuPwtJD5kaWyhGc7+OKutZxILTkiQsmplevcB4WKWddEw5a
+WsZeq/lAI0x9TGwhYZ37+ECW6a50Cir+Ude8UzKyyxQo5FtWZRZX2RP5499ptnyjgsnGjO
+P6Fex++wQu7UoZkJEiMN8gsemXeTzDUKLuplzEiChEBzATlZMGiPhjOPtwjdFbFOF4ugHv
+bWj8Cvmuq33gKd3lCBlAxdZ1NbjMsQAAAAMBAAEAAAGABtHh+DNVvy30DwAcHNOLx4/YIV
+e957BDbRJJEM9lwp1sas/EhOxq+582Lok2cj43hQgCYtrr0Ud6IaRNHouTcGhhzZ0Qa/UI
+tAGq0D+NgRdO5TV0F3ZtZkd4EPqmiqvFdHvbnYQRCoeVvnc6N212D0NTtnnDIDSMUybGLv
+gtiSORzKWpb7POtneMvYLW0UxT9UlQDpVkquz2GYjorxBQCyPp6YIe1YBqAa/GVWyWVcDQ
+14mrg6EhrLWeFgGkRBBy8jzIGz5bJj3F6evx4ZZFOSyihpailD25jWnKuS14sJAQZziHuO
+oK98q7o+4ZUPvfX2QZUwKCHVj0Z0sbNmFJ8n27fnPHHuX2yT9GnKBbsAlfb+ewXPVAfuaW
+ZpZWLbluYmTWR3OE+QUFZbpUerigFhf29Ar+E9LIFWd4bnzhLjBKBIugT/lEmmXVWDiQ0r
+VrM/G0IYXsiwjTt88y9s6le73QClcKT04IOHgUe4qEo9FiQ3OnCcDRi6xAAqRcaErJAAAA
+wEM0XYNgbui1iDlB7L9W8+FAFpkUVVmWU7kldMVTS+NM42YoNSPE4pmHYvN6/72gKVHlQL
+zDDY4UF762x0SWv9lJYgULehywhy1e4ciUMVHIBZUzpLrB8XNA1fkEx8fUwVojL/MgXm98
+tyen9HhNDHi64amaSAHD8hlqnGNBIAc4+17iekLg/yLNDrNgsoOICQGrlZMVTMJRg1GSRA
+2xlhLhIQiUqeu0aRt9xiL7Y8fqnE0+qEnGov5CxwSH5vdeYAAAAMEA5wDmiAwU7EdisEw8
+RMrZSw97Gx11YGtwCBz4p7eFFt4nuu3DyCxArMoTRC3EpJ9x/Sv2q2sZIaL/oBmxTI8E5R
+tAlARPhoDMDP9iLd9iy6z5eiasdbzfTG9DtVborkW4ubCVnWlFUayVLpgyHh+X+4EGGh1W
+Mvt4ANuwRPY91vbb08HA1q0x+68D3LyT/nENMiECjELilQOJcKD8aoo0Q8OiW3SKdXBTkF
+90/cFFU/ZIVHTo5CTVxX6QuSHWRwh/AAAAwQDBVQJ5ZpHq5hTQiMXG1JEvBeS1QQSx2ml2
+mweJ5sdxVWGbijMi6T/eKKbMWqONB2ellobfP++MeWEUUVot8Jh5naFFz4Mmf59FR/ikR/
+WW2Vb6fDP2zjQ/LM1EfutpFiD1oGixWzIZmm/JbkOJOQ0++zaKS6y3tBWbvq/fQ+jl5iH4
+kOn6Td8WofB5NzHS1IoKxeM2rZoEpKfy8SmheKomQmy+iSYQ3q4jMYyKgUyCJUtMABarBs
+/BSyHXJLRQEs8AAAAmZWMyLXVzZXJAaXAtMTcyLTMxLTE3LTE2OC5lYzIuaW50ZXJuYWwB
+AgMEBQ==
+-----END OPENSSH PRIVATE KEY-----
+[ec2-user@ip-172-31-17-168 ~]$ 
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+MobaXTerm
+----------
+3.95.250.173 | 172.31.20.213 | t3.micro | null
+[ ec2-user@ip-172-31-20-213 ~ ]$ chmod 600 daws-88s
+
+3.95.250.173 | 172.31.20.213 | t3.micro | null
+[ ec2-user@ip-172-31-20-213 ~ ]$ ssh -i daws-88s ec2-user@100.52.233.201
+Warning: Permanently added '100.52.233.201' (ECDSA) to the list of known hosts.
+ec2-user@100.52.233.201: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
+
+3.95.250.173 | 172.31.20.213 | t3.micro | null
+[ ec2-user@ip-172-31-20-213 ~ ]$ ls -la
+total 24
+drwx------. 3 ec2-user ec2-user 127 Mar 20 06:22 .
+drwxr-xr-x. 4 root     root      39 Jun 25  2024 ..
+-rw-------  1 ec2-user ec2-user 861 Mar 20 06:22 .bash_history
+-rw-r--r--. 1 ec2-user ec2-user  18 Nov 24  2022 .bash_logout
+-rw-r--r--. 1 ec2-user ec2-user 141 Nov 24  2022 .bash_profile
+-rw-r--r--. 1 ec2-user ec2-user 492 Nov 24  2022 .bashrc
+drwx------. 2 ec2-user ec2-user  29 Mar 20 06:20 .ssh
+-rw-------  1 ec2-user ec2-user 897 Mar 20 06:19 .viminfo
+-rw-------  1 ec2-user ec2-user 419 Mar 20 06:19 daws-88s
+
+3.95.250.173 | 172.31.20.213 | t3.micro | null
+[ ec2-user@ip-172-31-20-213 ~ ]$ vim ansible
+
+3.95.250.173 | 172.31.20.213 | t3.micro | null
+[ ec2-user@ip-172-31-20-213 ~ ]$ ls -la
+total 28
+drwx------. 3 ec2-user ec2-user  142 Mar 20 06:31 .
+drwxr-xr-x. 4 root     root       39 Jun 25  2024 ..
+-rw-------  1 ec2-user ec2-user  904 Mar 20 06:31 .bash_history
+-rw-r--r--. 1 ec2-user ec2-user   18 Nov 24  2022 .bash_logout
+-rw-r--r--. 1 ec2-user ec2-user  141 Nov 24  2022 .bash_profile
+-rw-r--r--. 1 ec2-user ec2-user  492 Nov 24  2022 .bashrc
+drwx------. 2 ec2-user ec2-user   29 Mar 20 06:20 .ssh
+-rw-------  1 ec2-user ec2-user 1309 Mar 20 06:31 .viminfo
+-rw-r--r--  1 ec2-user ec2-user 2635 Mar 20 06:31 ansible
+-rw-------  1 ec2-user ec2-user  419 Mar 20 06:19 daws-88s
+
+3.95.250.173 | 172.31.20.213 | t3.micro | null
+[ ec2-user@ip-172-31-20-213 ~ ]$ chmod 600 ansible
+
+3.95.250.173 | 172.31.20.213 | t3.micro | null
+[ ec2-user@ip-172-31-20-213 ~ ]$ ls -la
+total 28
+drwx------. 3 ec2-user ec2-user  142 Mar 20 06:31 .
+drwxr-xr-x. 4 root     root       39 Jun 25  2024 ..
+-rw-------  1 ec2-user ec2-user  953 Mar 20 06:31 .bash_history
+-rw-r--r--. 1 ec2-user ec2-user   18 Nov 24  2022 .bash_logout
+-rw-r--r--. 1 ec2-user ec2-user  141 Nov 24  2022 .bash_profile
+-rw-r--r--. 1 ec2-user ec2-user  492 Nov 24  2022 .bashrc
+drwx------. 2 ec2-user ec2-user   29 Mar 20 06:20 .ssh
+-rw-------  1 ec2-user ec2-user 1309 Mar 20 06:31 .viminfo
+-rw-------  1 ec2-user ec2-user 2635 Mar 20 06:31 ansible
+-rw-------  1 ec2-user ec2-user  419 Mar 20 06:19 daws-88s
+
+3.95.250.173 | 172.31.20.213 | t3.micro | null
+[ ec2-user@ip-172-31-20-213 ~ ]$ ssh -i ansible ansible@172.31.17.168
+Warning: Permanently added '172.31.17.168' (ECDSA) to the list of known hosts.
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+[ansible@ip-172-31-17-168 ~]$ exit
+logout
+Connection to 172.31.17.168 closed.
+
+3.95.250.173 | 172.31.20.213 | t3.micro | null
+[ ec2-user@ip-172-31-20-213 ~ ]$ pwd
+/home/ec2-user
+
+3.95.250.173 | 172.31.20.213 | t3.micro | null
+[ ec2-user@ip-172-31-20-213 ~ ]$ ls -la
+total 28
+drwx------. 3 ec2-user ec2-user  142 Mar 20 06:35 .
+drwxr-xr-x. 4 root     root       39 Jun 25  2024 ..
+-rw-------  1 ec2-user ec2-user 1037 Mar 20 06:35 .bash_history
+-rw-r--r--. 1 ec2-user ec2-user   18 Nov 24  2022 .bash_logout
+-rw-r--r--. 1 ec2-user ec2-user  141 Nov 24  2022 .bash_profile
+-rw-r--r--. 1 ec2-user ec2-user  492 Nov 24  2022 .bashrc
+drwx------. 2 ec2-user ec2-user   29 Mar 20 06:20 .ssh
+-rw-------  1 ec2-user ec2-user 1309 Mar 20 06:31 .viminfo
+-rw-------  1 ec2-user ec2-user 2635 Mar 20 06:31 ansible
+-rw-------  1 ec2-user ec2-user  419 Mar 20 06:19 daws-88s
+
+3.95.250.173 | 172.31.20.213 | t3.micro | null
+[ ec2-user@ip-172-31-20-213 ~ ]$ git pull
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+
+3.95.250.173 | 172.31.20.213 | t3.micro | null
+[ ec2-user@ip-172-31-20-213 ~ ]$ git clone https://github.com/saitehith28/DevSecOps.git
+Cloning into 'DevSecOps'...
+Username for 'https://github.com': saitehith28
+Password for 'https://saitehith28@github.com':
+remote: Invalid username or token. Password authentication is not supported for Git operations.
+fatal: Authentication failed for 'https://github.com/saitehith28/DevSecOps.git/'
+
+3.95.250.173 | 172.31.20.213 | t3.micro | null
+[ ec2-user@ip-172-31-20-213 ~ ]$ git clone https://github.com/saitehith28/DevSecOps.git
+Cloning into 'DevSecOps'...
+Username for 'https://github.com': saitehith28
+Password for 'https://saitehith28@github.com':
+remote: Invalid username or token. Password authentication is not supported for Git operations.
+fatal: Authentication failed for 'https://github.com/saitehith28/DevSecOps.git/'
+
+3.95.250.173 | 172.31.20.213 | t3.micro | null
+[ ec2-user@ip-172-31-20-213 ~ ]$ git clone https://github.com/saitehith28/DevSecOps.git
+Cloning into 'DevSecOps'...
+Username for 'https://github.com': saitehith
+Password for 'https://saitehith@github.com':
+remote: Invalid username or token. Password authentication is not supported for Git operations.
+fatal: Authentication failed for 'https://github.com/saitehith28/DevSecOps.git/'
+
+3.95.250.173 | 172.31.20.213 | t3.micro | null
+[ ec2-user@ip-172-31-20-213 ~ ]$ git config --global credential.helper store
+
+3.95.250.173 | 172.31.20.213 | t3.micro | null
+[ ec2-user@ip-172-31-20-213 ~ ]$ git
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]
+           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]
+           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+
+3.95.250.173 | 172.31.20.213 | t3.micro | null
+[ ec2-user@ip-172-31-20-213 ~ ]$ git clone https://github.com/saitehith28/DevSecOps.git
+Cloning into 'DevSecOps'...
+Username for 'https://github.com': saitehith28
+Password for 'https://saitehith28@github.com':
+remote: Invalid username or token. Password authentication is not supported for Git operations.
+fatal: Authentication failed for 'https://github.com/saitehith28/DevSecOps.git/'
+
+3.95.250.173 | 172.31.20.213 | t3.micro | null
+[ ec2-user@ip-172-31-20-213 ~ ]$ git git clone https://github.com/saitehith28/DevSecO
+git: 'git' is not a git command. See 'git --help'.
+
+The most similar command is
+	init
+
+3.95.250.173 | 172.31.20.213 | t3.micro | null
+[ ec2-user@ip-172-31-20-213 ~ ]$ git clone https://github.com/saitehith28/DevSecOps.git
+Cloning into 'DevSecOps'...
+Username for 'https://github.com': saitehith28
+Password for 'https://saitehith28@github.com':
+remote: Invalid username or token. Password authentication is not supported for Git operations.
+fatal: Authentication failed for 'https://github.com/saitehith28/DevSecOps.git/'
+
+3.95.250.173 | 172.31.20.213 | t3.micro | null
+[ ec2-user@ip-172-31-20-213 ~ ]$ git clone https://github.com/saitehith28/DevSecOps.git
+Cloning into 'DevSecOps'...
+Username for 'https://github.com': saitehith28
+Password for 'https://saitehith28@github.com':
+remote: Invalid username or token. Password authentication is not supported for Git operations.
+fatal: Authentication failed for 'https://github.com/saitehith28/DevSecOps.git/'
+
+3.95.250.173 | 172.31.20.213 | t3.micro | null
+[ ec2-user@ip-172-31-20-213 ~ ]$ git clone https://github.com/saitehith28/DevSecOps.git
+Cloning into 'DevSecOps'...
+Username for 'https://github.com': saitehith28
+Password for 'https://saitehith28@github.com':
+remote: Write access to repository not granted.
+fatal: unable to access 'https://github.com/saitehith28/DevSecOps.git/': The requested URL returned error: 403
+
+3.95.250.173 | 172.31.20.213 | t3.micro | null
+[ ec2-user@ip-172-31-20-213 ~ ]$ git clone https://github.com/saitehith28/DevSecOps.git
+Cloning into 'DevSecOps'...
+Username for 'https://github.com': saitehith28
+Password for 'https://saitehith28@github.com':
+remote: Enumerating objects: 1693, done.
+remote: Counting objects: 100% (21/21), done.
+remote: Compressing objects: 100% (15/15), done.
+remote: Total 1693 (delta 8), reused 16 (delta 6), pack-reused 1672 (from 2)
+Receiving objects: 100% (1693/1693), 1.20 MiB | 32.24 MiB/s, done.
+Resolving deltas: 100% (1058/1058), done.
+
+3.95.250.173 | 172.31.20.213 | t3.micro | null
+[ ec2-user@ip-172-31-20-213 ~ ]$ cd DevSecOps/
+
+3.95.250.173 | 172.31.20.213 | t3.micro | https://github.com/saitehith28/DevSecOps.git
+[ ec2-user@ip-172-31-20-213 ~/DevSecOps ]$ cd Ansible
+
+3.95.250.173 | 172.31.20.213 | t3.micro | https://github.com/saitehith28/DevSecOps.git
+[ ec2-user@ip-172-31-20-213 ~/DevSecOps/Ansible ]$ ls -la
+total 152
+drwxr-xr-x  2 ec2-user ec2-user  4096 Mar 20 06:58 .
+drwxr-xr-x 12 ec2-user ec2-user  4096 Mar 20 06:58 ..
+-rw-r--r--  1 ec2-user ec2-user   120 Mar 20 06:58 01-playbook.yaml
+-rw-r--r--  1 ec2-user ec2-user   121 Mar 20 06:58 02-playbook.yaml
+-rw-r--r--  1 ec2-user ec2-user   267 Mar 20 06:58 03-playbook.yaml
+-rw-r--r--  1 ec2-user ec2-user   279 Mar 20 06:58 04-vars.yaml
+-rw-r--r--  1 ec2-user ec2-user   311 Mar 20 06:58 05-vars.yaml
+-rw-r--r--  1 ec2-user ec2-user   247 Mar 20 06:58 06-vars.yaml
+-rw-r--r--  1 ec2-user ec2-user   365 Mar 20 06:58 07-vars.yaml
+-rw-r--r--  1 ec2-user ec2-user   169 Mar 20 06:58 08-vars.yaml
+-rw-r--r--  1 ec2-user ec2-user   176 Mar 20 06:58 09-vars.yaml
+-rw-r--r--  1 ec2-user ec2-user   337 Mar 20 06:58 10-vars-preference.yaml
+-rw-r--r--  1 ec2-user ec2-user   479 Mar 20 06:58 11-datatypes.yaml
+-rw-r--r--  1 ec2-user ec2-user   199 Mar 20 06:58 12-conditions.yaml
+-rw-r--r--  1 ec2-user ec2-user   262 Mar 20 06:58 13-conditions.yaml
+-rw-r--r--  1 ec2-user ec2-user   447 Mar 20 06:58 14-conditions.yaml
+-rw-r--r--  1 ec2-user ec2-user   603 Mar 20 06:58 15-shell-command.yaml
+-rw-r--r--  1 ec2-user ec2-user   191 Mar 20 06:58 16-loops.yaml
+-rw-r--r--  1 ec2-user ec2-user   228 Mar 20 06:58 17-loops.yaml
+-rw-r--r--  1 ec2-user ec2-user   330 Mar 20 06:58 18-loops.yaml
+-rw-r--r--  1 ec2-user ec2-user  1423 Mar 20 06:58 19-filters.yaml
+-rw-r--r--  1 ec2-user ec2-user   398 Mar 20 06:58 20-error-handling.yaml
+-rw-r--r--  1 ec2-user ec2-user   152 Mar 20 06:58 21-idempotent.yaml
+-rw-r--r--  1 ec2-user ec2-user   133 Mar 20 06:58 ansible.cfg
+-rw-r--r--  1 ec2-user ec2-user 41770 Mar 20 06:58 ansible_facts.json
+-rw-r--r--  1 ec2-user ec2-user   111 Mar 20 06:58 course.yaml
+-rw-r--r--  1 ec2-user ec2-user   291 Mar 20 06:58 inventory.ini
+-rw-r--r--  1 ec2-user ec2-user   129 Mar 20 06:58 students.yaml
+
+3.95.250.173 | 172.31.20.213 | t3.micro | https://github.com/saitehith28/DevSecOps.git
+[ ec2-user@ip-172-31-20-213 ~/DevSecOps/Ansible ]$ cat ansible.cfg
+[defaults]
+
+inventory = inventory.ini
+log_path = /var/log/ansible.log
+private_key_file = /home/ec2-user/ansible
+remote_user = ansible
+3.95.250.173 | 172.31.20.213 | t3.micro | https://github.com/saitehith28/DevSecOps.git
+[ ec2-user@ip-172-31-20-213 ~/DevSecOps/Ansible ]$ ansible -i 172.31.17.168 -m ping
+-bash: ansible: command not found
+
+3.95.250.173 | 172.31.20.213 | t3.micro | https://github.com/saitehith28/DevSecOps.git
+[ ec2-user@ip-172-31-20-213 ~/DevSecOps/Ansible ]$ sudo dnf install ansible
+Extra Packages for Enterprise Linux 9 - x86_64                       108 kB/s |  20 kB     00:00
+Extra Packages for Enterprise Linux 9 - x86_64                        62 MB/s |  20 MB     00:00
+Extra Packages for Enterprise Linux 9 openh264 (From Cisco) - x86_64 4.4 kB/s | 993  B     00:00
+Red Hat Enterprise Linux 9 for x86_64 - AppStream from RHUI (RPMs)    65 kB/s | 4.5 kB     00:00
+Red Hat Enterprise Linux 9 for x86_64 - AppStream from RHUI (RPMs)   116 MB/s |  85 MB     00:00
+Red Hat Enterprise Linux 9 for x86_64 - BaseOS from RHUI (RPMs)       96 kB/s | 4.1 kB     00:00
+Red Hat Enterprise Linux 9 for x86_64 - BaseOS from RHUI (RPMs)      113 MB/s | 107 MB     00:00
+Red Hat Enterprise Linux 9 Client Configuration                       26 kB/s | 1.5 kB     00:00
+Red Hat Enterprise Linux 9 Client Configuration                       50 kB/s | 4.1 kB     00:00
+Dependencies resolved.
+=====================================================================================================
+ Package                   Arch        Version                 Repository                       Size
+=====================================================================================================
+Installing:
+ ansible                   noarch      1:7.7.0-1.el9           epel                             34 M
+Installing dependencies:
+ ansible-core              x86_64      1:2.14.18-1.el9         rhel-9-appstream-rhui-rpms      2.6 M
+ python3-cffi              x86_64      1.14.5-5.el9            rhel-9-appstream-rhui-rpms      257 k
+ python3-cryptography      x86_64      36.0.1-5.el9_6          rhel-9-baseos-rhui-rpms         1.2 M
+ python3-packaging         noarch      20.9-5.el9              rhel-9-appstream-rhui-rpms       81 k
+ python3-ply               noarch      3.11-14.el9             rhel-9-appstream-rhui-rpms      111 k
+ python3-pycparser         noarch      2.20-6.el9              rhel-9-appstream-rhui-rpms      139 k
+ python3-pyparsing         noarch      2.4.7-9.el9             rhel-9-baseos-rhui-rpms         154 k
+ python3-resolvelib        noarch      0.5.4-5.el9             rhel-9-appstream-rhui-rpms       38 k
+
+Transaction Summary
+=====================================================================================================
+Install  9 Packages
+
+Total download size: 39 M
+Installed size: 383 M
+Is this ok [y/N]: y
+Downloading Packages:
+(1/9): python3-resolvelib-0.5.4-5.el9.noarch.rpm                     532 kB/s |  38 kB     00:00
+(2/9): python3-pycparser-2.20-6.el9.noarch.rpm                       6.6 MB/s | 139 kB     00:00
+(3/9): python3-packaging-20.9-5.el9.noarch.rpm                       4.4 MB/s |  81 kB     00:00
+(4/9): python3-ply-3.11-14.el9.noarch.rpm                            5.6 MB/s | 111 kB     00:00
+(5/9): ansible-7.7.0-1.el9.noarch.rpm                                115 MB/s |  34 MB     00:00
+(6/9): python3-cffi-1.14.5-5.el9.x86_64.rpm                          852 kB/s | 257 kB     00:00
+(7/9): ansible-core-2.14.18-1.el9.x86_64.rpm                          12 MB/s | 2.6 MB     00:00
+(8/9): python3-pyparsing-2.4.7-9.el9.noarch.rpm                      1.2 MB/s | 154 kB     00:00
+(9/9): python3-cryptography-36.0.1-5.el9_6.x86_64.rpm                2.3 MB/s | 1.2 MB     00:00
+-----------------------------------------------------------------------------------------------------
+Total                                                                 38 MB/s |  39 MB     00:01
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                             1/1
+  Installing       : python3-pyparsing-2.4.7-9.el9.noarch                                        1/9
+  Installing       : python3-packaging-20.9-5.el9.noarch                                         2/9
+  Installing       : python3-ply-3.11-14.el9.noarch                                              3/9
+  Installing       : python3-pycparser-2.20-6.el9.noarch                                         4/9
+  Installing       : python3-cffi-1.14.5-5.el9.x86_64                                            5/9
+  Installing       : python3-cryptography-36.0.1-5.el9_6.x86_64                                  6/9
+  Installing       : python3-resolvelib-0.5.4-5.el9.noarch                                       7/9
+  Installing       : ansible-core-1:2.14.18-1.el9.x86_64                                         8/9
+  Installing       : ansible-1:7.7.0-1.el9.noarch                                                9/9
+  Running scriptlet: ansible-1:7.7.0-1.el9.noarch                                                9/9
+  Verifying        : ansible-1:7.7.0-1.el9.noarch                                                1/9
+  Verifying        : python3-cffi-1.14.5-5.el9.x86_64                                            2/9
+  Verifying        : python3-resolvelib-0.5.4-5.el9.noarch                                       3/9
+  Verifying        : python3-pycparser-2.20-6.el9.noarch                                         4/9
+  Verifying        : python3-packaging-20.9-5.el9.noarch                                         5/9
+  Verifying        : python3-ply-3.11-14.el9.noarch                                              6/9
+  Verifying        : ansible-core-1:2.14.18-1.el9.x86_64                                         7/9
+  Verifying        : python3-pyparsing-2.4.7-9.el9.noarch                                        8/9
+  Verifying        : python3-cryptography-36.0.1-5.el9_6.x86_64                                  9/9
+
+Installed:
+  ansible-1:7.7.0-1.el9.noarch                   ansible-core-1:2.14.18-1.el9.x86_64
+  python3-cffi-1.14.5-5.el9.x86_64               python3-cryptography-36.0.1-5.el9_6.x86_64
+  python3-packaging-20.9-5.el9.noarch            python3-ply-3.11-14.el9.noarch
+  python3-pycparser-2.20-6.el9.noarch            python3-pyparsing-2.4.7-9.el9.noarch
+  python3-resolvelib-0.5.4-5.el9.noarch
+
+Complete!
+
+3.95.250.173 | 172.31.20.213 | t3.micro | https://github.com/saitehith28/DevSecOps.git
+[ ec2-user@ip-172-31-20-213 ~/DevSecOps/Ansible ]$ ansible -i 172.31.17.168 -m ping
+[WARNING]: log file at /var/log/ansible.log is not writeable and we cannot create it, aborting
+
+usage: ansible [-h] [--version] [-v] [-b] [--become-method BECOME_METHOD]
+               [--become-user BECOME_USER] [-K | --become-password-file BECOME_PASSWORD_FILE]
+               [-i INVENTORY] [--list-hosts] [-l SUBSET] [-P POLL_INTERVAL] [-B SECONDS] [-o]
+               [-t TREE] [--private-key PRIVATE_KEY_FILE] [-u REMOTE_USER] [-c CONNECTION]
+               [-T TIMEOUT] [--ssh-common-args SSH_COMMON_ARGS] [--sftp-extra-args SFTP_EXTRA_ARGS]
+               [--scp-extra-args SCP_EXTRA_ARGS] [--ssh-extra-args SSH_EXTRA_ARGS]
+               [-k | --connection-password-file CONNECTION_PASSWORD_FILE] [-C] [-D] [-e EXTRA_VARS]
+               [--vault-id VAULT_IDS]
+               [--ask-vault-password | --vault-password-file VAULT_PASSWORD_FILES] [-f FORKS]
+               [-M MODULE_PATH] [--playbook-dir BASEDIR] [--task-timeout TASK_TIMEOUT]
+               [-a MODULE_ARGS] [-m MODULE_NAME]
+               pattern
+ansible: error: the following arguments are required: pattern
+
+usage: ansible [-h] [--version] [-v] [-b] [--become-method BECOME_METHOD]
+               [--become-user BECOME_USER] [-K | --become-password-file BECOME_PASSWORD_FILE]
+               [-i INVENTORY] [--list-hosts] [-l SUBSET] [-P POLL_INTERVAL] [-B SECONDS] [-o]
+               [-t TREE] [--private-key PRIVATE_KEY_FILE] [-u REMOTE_USER] [-c CONNECTION]
+               [-T TIMEOUT] [--ssh-common-args SSH_COMMON_ARGS] [--sftp-extra-args SFTP_EXTRA_ARGS]
+               [--scp-extra-args SCP_EXTRA_ARGS] [--ssh-extra-args SSH_EXTRA_ARGS]
+               [-k | --connection-password-file CONNECTION_PASSWORD_FILE] [-C] [-D] [-e EXTRA_VARS]
+               [--vault-id VAULT_IDS]
+               [--ask-vault-password | --vault-password-file VAULT_PASSWORD_FILES] [-f FORKS]
+               [-M MODULE_PATH] [--playbook-dir BASEDIR] [--task-timeout TASK_TIMEOUT]
+               [-a MODULE_ARGS] [-m MODULE_NAME]
+               pattern
+
+Define and run a single task 'playbook' against a set of hosts
+
+positional arguments:
+  pattern               host pattern
+
+optional arguments:
+  --ask-vault-password, --ask-vault-pass
+                        ask for vault password
+  --become-password-file BECOME_PASSWORD_FILE, --become-pass-file BECOME_PASSWORD_FILE
+                        Become password file
+  --connection-password-file CONNECTION_PASSWORD_FILE, --conn-pass-file CONNECTION_PASSWORD_FILE
+                        Connection password file
+  --list-hosts          outputs a list of matching hosts; does not execute anything else
+  --playbook-dir BASEDIR
+                        Since this tool does not use playbooks, use this as a substitute playbook
+                        directory. This sets the relative path for many features including roles/
+                        group_vars/ etc.
+  --task-timeout TASK_TIMEOUT
+                        set task timeout limit in seconds, must be positive integer.
+  --vault-id VAULT_IDS  the vault identity to use
+  --vault-password-file VAULT_PASSWORD_FILES, --vault-pass-file VAULT_PASSWORD_FILES
+                        vault password file
+  --version             show program's version number, config file location, configured module
+                        search path, module location, executable location and exit
+  -B SECONDS, --background SECONDS
+                        run asynchronously, failing after X seconds (default=N/A)
+  -C, --check           don't make any changes; instead, try to predict some of the changes that
+                        may occur
+  -D, --diff            when changing (small) files and templates, show the differences in those
+                        files; works great with --check
+  -K, --ask-become-pass
+                        ask for privilege escalation password
+  -M MODULE_PATH, --module-path MODULE_PATH
+                        prepend colon-separated path(s) to module library (default={{ ANSIBLE_HOME
+                        ~ "/plugins/modules:/usr/share/ansible/plugins/modules" }})
+  -P POLL_INTERVAL, --poll POLL_INTERVAL
+                        set the poll interval if using -B (default=15)
+  -a MODULE_ARGS, --args MODULE_ARGS
+                        The action's options in space separated k=v format: -a 'opt1=val1
+                        opt2=val2' or a json string: -a '{"opt1": "val1", "opt2": "val2"}'
+  -e EXTRA_VARS, --extra-vars EXTRA_VARS
+                        set additional variables as key=value or YAML/JSON, if filename prepend
+                        with @
+  -f FORKS, --forks FORKS
+                        specify number of parallel processes to use (default=5)
+  -h, --help            show this help message and exit
+  -i INVENTORY, --inventory INVENTORY, --inventory-file INVENTORY
+                        specify inventory host path or comma separated host list. --inventory-file
+                        is deprecated
+  -k, --ask-pass        ask for connection password
+  -l SUBSET, --limit SUBSET
+                        further limit selected hosts to an additional pattern
+  -m MODULE_NAME, --module-name MODULE_NAME
+                        Name of the action to execute (default=command)
+  -o, --one-line        condense output
+  -t TREE, --tree TREE  log output to this directory
+  -v, --verbose         Causes Ansible to print more debug messages. Adding multiple -v will
+                        increase the verbosity, the builtin plugins currently evaluate up to
+                        -vvvvvv. A reasonable level to start is -vvv, connection debugging might
+                        require -vvvv.
+
+Privilege Escalation Options:
+  control how and which user you become as on target hosts
+
+  --become-method BECOME_METHOD
+                        privilege escalation method to use (default=sudo), use `ansible-doc -t
+                        become -l` to list valid choices.
+  --become-user BECOME_USER
+                        run operations as this user (default=root)
+  -b, --become          run operations with become (does not imply password prompting)
+
+Connection Options:
+  control as whom and how to connect to hosts
+
+  --private-key PRIVATE_KEY_FILE, --key-file PRIVATE_KEY_FILE
+                        use this file to authenticate the connection
+  --scp-extra-args SCP_EXTRA_ARGS
+                        specify extra arguments to pass to scp only (e.g. -l)
+  --sftp-extra-args SFTP_EXTRA_ARGS
+                        specify extra arguments to pass to sftp only (e.g. -f, -l)
+  --ssh-common-args SSH_COMMON_ARGS
+                        specify common arguments to pass to sftp/scp/ssh (e.g. ProxyCommand)
+  --ssh-extra-args SSH_EXTRA_ARGS
+                        specify extra arguments to pass to ssh only (e.g. -R)
+  -T TIMEOUT, --timeout TIMEOUT
+                        override the connection timeout in seconds (default=10)
+  -c CONNECTION, --connection CONNECTION
+                        connection type to use (default=smart)
+  -u REMOTE_USER, --user REMOTE_USER
+                        connect as this user (default=ansible)
+
+Some actions do not make sense in Ad-Hoc (include, meta, etc)
+
+3.95.250.173 | 172.31.20.213 | t3.micro | https://github.com/saitehith28/DevSecOps.git
+[ ec2-user@ip-172-31-20-213 ~/DevSecOps/Ansible ]$ ansible -i 172.31.17.168, -m ping
+[WARNING]: log file at /var/log/ansible.log is not writeable and we cannot create it, aborting
+
+usage: ansible [-h] [--version] [-v] [-b] [--become-method BECOME_METHOD]
+               [--become-user BECOME_USER] [-K | --become-password-file BECOME_PASSWORD_FILE]
+               [-i INVENTORY] [--list-hosts] [-l SUBSET] [-P POLL_INTERVAL] [-B SECONDS] [-o]
+               [-t TREE] [--private-key PRIVATE_KEY_FILE] [-u REMOTE_USER] [-c CONNECTION]
+               [-T TIMEOUT] [--ssh-common-args SSH_COMMON_ARGS] [--sftp-extra-args SFTP_EXTRA_ARGS]
+               [--scp-extra-args SCP_EXTRA_ARGS] [--ssh-extra-args SSH_EXTRA_ARGS]
+               [-k | --connection-password-file CONNECTION_PASSWORD_FILE] [-C] [-D] [-e EXTRA_VARS]
+               [--vault-id VAULT_IDS]
+               [--ask-vault-password | --vault-password-file VAULT_PASSWORD_FILES] [-f FORKS]
+               [-M MODULE_PATH] [--playbook-dir BASEDIR] [--task-timeout TASK_TIMEOUT]
+               [-a MODULE_ARGS] [-m MODULE_NAME]
+               pattern
+ansible: error: the following arguments are required: pattern
+
+usage: ansible [-h] [--version] [-v] [-b] [--become-method BECOME_METHOD]
+               [--become-user BECOME_USER] [-K | --become-password-file BECOME_PASSWORD_FILE]
+               [-i INVENTORY] [--list-hosts] [-l SUBSET] [-P POLL_INTERVAL] [-B SECONDS] [-o]
+               [-t TREE] [--private-key PRIVATE_KEY_FILE] [-u REMOTE_USER] [-c CONNECTION]
+               [-T TIMEOUT] [--ssh-common-args SSH_COMMON_ARGS] [--sftp-extra-args SFTP_EXTRA_ARGS]
+               [--scp-extra-args SCP_EXTRA_ARGS] [--ssh-extra-args SSH_EXTRA_ARGS]
+               [-k | --connection-password-file CONNECTION_PASSWORD_FILE] [-C] [-D] [-e EXTRA_VARS]
+               [--vault-id VAULT_IDS]
+               [--ask-vault-password | --vault-password-file VAULT_PASSWORD_FILES] [-f FORKS]
+               [-M MODULE_PATH] [--playbook-dir BASEDIR] [--task-timeout TASK_TIMEOUT]
+               [-a MODULE_ARGS] [-m MODULE_NAME]
+               pattern
+
+Define and run a single task 'playbook' against a set of hosts
+
+positional arguments:
+  pattern               host pattern
+
+optional arguments:
+  --ask-vault-password, --ask-vault-pass
+                        ask for vault password
+  --become-password-file BECOME_PASSWORD_FILE, --become-pass-file BECOME_PASSWORD_FILE
+                        Become password file
+  --connection-password-file CONNECTION_PASSWORD_FILE, --conn-pass-file CONNECTION_PASSWORD_FILE
+                        Connection password file
+  --list-hosts          outputs a list of matching hosts; does not execute anything else
+  --playbook-dir BASEDIR
+                        Since this tool does not use playbooks, use this as a substitute playbook
+                        directory. This sets the relative path for many features including roles/
+                        group_vars/ etc.
+  --task-timeout TASK_TIMEOUT
+                        set task timeout limit in seconds, must be positive integer.
+  --vault-id VAULT_IDS  the vault identity to use
+  --vault-password-file VAULT_PASSWORD_FILES, --vault-pass-file VAULT_PASSWORD_FILES
+                        vault password file
+  --version             show program's version number, config file location, configured module
+                        search path, module location, executable location and exit
+  -B SECONDS, --background SECONDS
+                        run asynchronously, failing after X seconds (default=N/A)
+  -C, --check           don't make any changes; instead, try to predict some of the changes that
+                        may occur
+  -D, --diff            when changing (small) files and templates, show the differences in those
+                        files; works great with --check
+  -K, --ask-become-pass
+                        ask for privilege escalation password
+  -M MODULE_PATH, --module-path MODULE_PATH
+                        prepend colon-separated path(s) to module library (default={{ ANSIBLE_HOME
+                        ~ "/plugins/modules:/usr/share/ansible/plugins/modules" }})
+  -P POLL_INTERVAL, --poll POLL_INTERVAL
+                        set the poll interval if using -B (default=15)
+  -a MODULE_ARGS, --args MODULE_ARGS
+                        The action's options in space separated k=v format: -a 'opt1=val1
+                        opt2=val2' or a json string: -a '{"opt1": "val1", "opt2": "val2"}'
+  -e EXTRA_VARS, --extra-vars EXTRA_VARS
+                        set additional variables as key=value or YAML/JSON, if filename prepend
+                        with @
+  -f FORKS, --forks FORKS
+                        specify number of parallel processes to use (default=5)
+  -h, --help            show this help message and exit
+  -i INVENTORY, --inventory INVENTORY, --inventory-file INVENTORY
+                        specify inventory host path or comma separated host list. --inventory-file
+                        is deprecated
+  -k, --ask-pass        ask for connection password
+  -l SUBSET, --limit SUBSET
+                        further limit selected hosts to an additional pattern
+  -m MODULE_NAME, --module-name MODULE_NAME
+                        Name of the action to execute (default=command)
+  -o, --one-line        condense output
+  -t TREE, --tree TREE  log output to this directory
+  -v, --verbose         Causes Ansible to print more debug messages. Adding multiple -v will
+                        increase the verbosity, the builtin plugins currently evaluate up to
+                        -vvvvvv. A reasonable level to start is -vvv, connection debugging might
+                        require -vvvv.
+
+Privilege Escalation Options:
+  control how and which user you become as on target hosts
+
+  --become-method BECOME_METHOD
+                        privilege escalation method to use (default=sudo), use `ansible-doc -t
+                        become -l` to list valid choices.
+  --become-user BECOME_USER
+                        run operations as this user (default=root)
+  -b, --become          run operations with become (does not imply password prompting)
+
+Connection Options:
+  control as whom and how to connect to hosts
+
+  --private-key PRIVATE_KEY_FILE, --key-file PRIVATE_KEY_FILE
+                        use this file to authenticate the connection
+  --scp-extra-args SCP_EXTRA_ARGS
+                        specify extra arguments to pass to scp only (e.g. -l)
+  --sftp-extra-args SFTP_EXTRA_ARGS
+                        specify extra arguments to pass to sftp only (e.g. -f, -l)
+  --ssh-common-args SSH_COMMON_ARGS
+                        specify common arguments to pass to sftp/scp/ssh (e.g. ProxyCommand)
+  --ssh-extra-args SSH_EXTRA_ARGS
+                        specify extra arguments to pass to ssh only (e.g. -R)
+  -T TIMEOUT, --timeout TIMEOUT
+                        override the connection timeout in seconds (default=10)
+  -c CONNECTION, --connection CONNECTION
+                        connection type to use (default=smart)
+  -u REMOTE_USER, --user REMOTE_USER
+                        connect as this user (default=ansible)
+
+Some actions do not make sense in Ad-Hoc (include, meta, etc)
+
+3.95.250.173 | 172.31.20.213 | t3.micro | https://github.com/saitehith28/DevSecOps.git
+[ ec2-user@ip-172-31-20-213 ~/DevSecOps/Ansible ]$ ansible -vv -i 172.31.17.168, -m ping
+[WARNING]: log file at /var/log/ansible.log is not writeable and we cannot create it, aborting
+
+usage: ansible [-h] [--version] [-v] [-b] [--become-method BECOME_METHOD]
+               [--become-user BECOME_USER] [-K | --become-password-file BECOME_PASSWORD_FILE]
+               [-i INVENTORY] [--list-hosts] [-l SUBSET] [-P POLL_INTERVAL] [-B SECONDS] [-o]
+               [-t TREE] [--private-key PRIVATE_KEY_FILE] [-u REMOTE_USER] [-c CONNECTION]
+               [-T TIMEOUT] [--ssh-common-args SSH_COMMON_ARGS] [--sftp-extra-args SFTP_EXTRA_ARGS]
+               [--scp-extra-args SCP_EXTRA_ARGS] [--ssh-extra-args SSH_EXTRA_ARGS]
+               [-k | --connection-password-file CONNECTION_PASSWORD_FILE] [-C] [-D] [-e EXTRA_VARS]
+               [--vault-id VAULT_IDS]
+               [--ask-vault-password | --vault-password-file VAULT_PASSWORD_FILES] [-f FORKS]
+               [-M MODULE_PATH] [--playbook-dir BASEDIR] [--task-timeout TASK_TIMEOUT]
+               [-a MODULE_ARGS] [-m MODULE_NAME]
+               pattern
+ansible: error: the following arguments are required: pattern
+
+usage: ansible [-h] [--version] [-v] [-b] [--become-method BECOME_METHOD]
+               [--become-user BECOME_USER] [-K | --become-password-file BECOME_PASSWORD_FILE]
+               [-i INVENTORY] [--list-hosts] [-l SUBSET] [-P POLL_INTERVAL] [-B SECONDS] [-o]
+               [-t TREE] [--private-key PRIVATE_KEY_FILE] [-u REMOTE_USER] [-c CONNECTION]
+               [-T TIMEOUT] [--ssh-common-args SSH_COMMON_ARGS] [--sftp-extra-args SFTP_EXTRA_ARGS]
+               [--scp-extra-args SCP_EXTRA_ARGS] [--ssh-extra-args SSH_EXTRA_ARGS]
+               [-k | --connection-password-file CONNECTION_PASSWORD_FILE] [-C] [-D] [-e EXTRA_VARS]
+               [--vault-id VAULT_IDS]
+               [--ask-vault-password | --vault-password-file VAULT_PASSWORD_FILES] [-f FORKS]
+               [-M MODULE_PATH] [--playbook-dir BASEDIR] [--task-timeout TASK_TIMEOUT]
+               [-a MODULE_ARGS] [-m MODULE_NAME]
+               pattern
+
+Define and run a single task 'playbook' against a set of hosts
+
+positional arguments:
+  pattern               host pattern
+
+optional arguments:
+  --ask-vault-password, --ask-vault-pass
+                        ask for vault password
+  --become-password-file BECOME_PASSWORD_FILE, --become-pass-file BECOME_PASSWORD_FILE
+                        Become password file
+  --connection-password-file CONNECTION_PASSWORD_FILE, --conn-pass-file CONNECTION_PASSWORD_FILE
+                        Connection password file
+  --list-hosts          outputs a list of matching hosts; does not execute anything else
+  --playbook-dir BASEDIR
+                        Since this tool does not use playbooks, use this as a substitute playbook
+                        directory. This sets the relative path for many features including roles/
+                        group_vars/ etc.
+  --task-timeout TASK_TIMEOUT
+                        set task timeout limit in seconds, must be positive integer.
+  --vault-id VAULT_IDS  the vault identity to use
+  --vault-password-file VAULT_PASSWORD_FILES, --vault-pass-file VAULT_PASSWORD_FILES
+                        vault password file
+  --version             show program's version number, config file location, configured module
+                        search path, module location, executable location and exit
+  -B SECONDS, --background SECONDS
+                        run asynchronously, failing after X seconds (default=N/A)
+  -C, --check           don't make any changes; instead, try to predict some of the changes that
+                        may occur
+  -D, --diff            when changing (small) files and templates, show the differences in those
+                        files; works great with --check
+  -K, --ask-become-pass
+                        ask for privilege escalation password
+  -M MODULE_PATH, --module-path MODULE_PATH
+                        prepend colon-separated path(s) to module library (default={{ ANSIBLE_HOME
+                        ~ "/plugins/modules:/usr/share/ansible/plugins/modules" }})
+  -P POLL_INTERVAL, --poll POLL_INTERVAL
+                        set the poll interval if using -B (default=15)
+  -a MODULE_ARGS, --args MODULE_ARGS
+                        The action's options in space separated k=v format: -a 'opt1=val1
+                        opt2=val2' or a json string: -a '{"opt1": "val1", "opt2": "val2"}'
+  -e EXTRA_VARS, --extra-vars EXTRA_VARS
+                        set additional variables as key=value or YAML/JSON, if filename prepend
+                        with @
+  -f FORKS, --forks FORKS
+                        specify number of parallel processes to use (default=5)
+  -h, --help            show this help message and exit
+  -i INVENTORY, --inventory INVENTORY, --inventory-file INVENTORY
+                        specify inventory host path or comma separated host list. --inventory-file
+                        is deprecated
+  -k, --ask-pass        ask for connection password
+  -l SUBSET, --limit SUBSET
+                        further limit selected hosts to an additional pattern
+  -m MODULE_NAME, --module-name MODULE_NAME
+                        Name of the action to execute (default=command)
+  -o, --one-line        condense output
+  -t TREE, --tree TREE  log output to this directory
+  -v, --verbose         Causes Ansible to print more debug messages. Adding multiple -v will
+                        increase the verbosity, the builtin plugins currently evaluate up to
+                        -vvvvvv. A reasonable level to start is -vvv, connection debugging might
+                        require -vvvv.
+
+Privilege Escalation Options:
+  control how and which user you become as on target hosts
+
+  --become-method BECOME_METHOD
+                        privilege escalation method to use (default=sudo), use `ansible-doc -t
+                        become -l` to list valid choices.
+  --become-user BECOME_USER
+                        run operations as this user (default=root)
+  -b, --become          run operations with become (does not imply password prompting)
+
+Connection Options:
+  control as whom and how to connect to hosts
+
+  --private-key PRIVATE_KEY_FILE, --key-file PRIVATE_KEY_FILE
+                        use this file to authenticate the connection
+  --scp-extra-args SCP_EXTRA_ARGS
+                        specify extra arguments to pass to scp only (e.g. -l)
+  --sftp-extra-args SFTP_EXTRA_ARGS
+                        specify extra arguments to pass to sftp only (e.g. -f, -l)
+  --ssh-common-args SSH_COMMON_ARGS
+                        specify common arguments to pass to sftp/scp/ssh (e.g. ProxyCommand)
+  --ssh-extra-args SSH_EXTRA_ARGS
+                        specify extra arguments to pass to ssh only (e.g. -R)
+  -T TIMEOUT, --timeout TIMEOUT
+                        override the connection timeout in seconds (default=10)
+  -c CONNECTION, --connection CONNECTION
+                        connection type to use (default=smart)
+  -u REMOTE_USER, --user REMOTE_USER
+                        connect as this user (default=ansible)
+
+Some actions do not make sense in Ad-Hoc (include, meta, etc)
+
+3.95.250.173 | 172.31.20.213 | t3.micro | https://github.com/saitehith28/DevSecOps.git
+[ ec2-user@ip-172-31-20-213 ~/DevSecOps/Ansible ]$ ansible -vv -i 172.31.17.168, -m ping
+[WARNING]: log file at /var/log/ansible.log is not writeable and we cannot create it, aborting
+
+usage: ansible [-h] [--version] [-v] [-b] [--become-method BECOME_METHOD]
+               [--become-user BECOME_USER] [-K | --become-password-file BECOME_PASSWORD_FILE]
+               [-i INVENTORY] [--list-hosts] [-l SUBSET] [-P POLL_INTERVAL] [-B SECONDS] [-o]
+               [-t TREE] [--private-key PRIVATE_KEY_FILE] [-u REMOTE_USER] [-c CONNECTION]
+               [-T TIMEOUT] [--ssh-common-args SSH_COMMON_ARGS] [--sftp-extra-args SFTP_EXTRA_ARGS]
+               [--scp-extra-args SCP_EXTRA_ARGS] [--ssh-extra-args SSH_EXTRA_ARGS]
+               [-k | --connection-password-file CONNECTION_PASSWORD_FILE] [-C] [-D] [-e EXTRA_VARS]
+               [--vault-id VAULT_IDS]
+               [--ask-vault-password | --vault-password-file VAULT_PASSWORD_FILES] [-f FORKS]
+               [-M MODULE_PATH] [--playbook-dir BASEDIR] [--task-timeout TASK_TIMEOUT]
+               [-a MODULE_ARGS] [-m MODULE_NAME]
+               pattern
+ansible: error: the following arguments are required: pattern
+
+usage: ansible [-h] [--version] [-v] [-b] [--become-method BECOME_METHOD]
+               [--become-user BECOME_USER] [-K | --become-password-file BECOME_PASSWORD_FILE]
+               [-i INVENTORY] [--list-hosts] [-l SUBSET] [-P POLL_INTERVAL] [-B SECONDS] [-o]
+               [-t TREE] [--private-key PRIVATE_KEY_FILE] [-u REMOTE_USER] [-c CONNECTION]
+               [-T TIMEOUT] [--ssh-common-args SSH_COMMON_ARGS] [--sftp-extra-args SFTP_EXTRA_ARGS]
+               [--scp-extra-args SCP_EXTRA_ARGS] [--ssh-extra-args SSH_EXTRA_ARGS]
+               [-k | --connection-password-file CONNECTION_PASSWORD_FILE] [-C] [-D] [-e EXTRA_VARS]
+               [--vault-id VAULT_IDS]
+               [--ask-vault-password | --vault-password-file VAULT_PASSWORD_FILES] [-f FORKS]
+               [-M MODULE_PATH] [--playbook-dir BASEDIR] [--task-timeout TASK_TIMEOUT]
+               [-a MODULE_ARGS] [-m MODULE_NAME]
+               pattern
+
+Define and run a single task 'playbook' against a set of hosts
+
+positional arguments:
+  pattern               host pattern
+
+optional arguments:
+  --ask-vault-password, --ask-vault-pass
+                        ask for vault password
+  --become-password-file BECOME_PASSWORD_FILE, --become-pass-file BECOME_PASSWORD_FILE
+                        Become password file
+  --connection-password-file CONNECTION_PASSWORD_FILE, --conn-pass-file CONNECTION_PASSWORD_FILE
+                        Connection password file
+  --list-hosts          outputs a list of matching hosts; does not execute anything else
+  --playbook-dir BASEDIR
+                        Since this tool does not use playbooks, use this as a substitute playbook
+                        directory. This sets the relative path for many features including roles/
+                        group_vars/ etc.
+  --task-timeout TASK_TIMEOUT
+                        set task timeout limit in seconds, must be positive integer.
+  --vault-id VAULT_IDS  the vault identity to use
+  --vault-password-file VAULT_PASSWORD_FILES, --vault-pass-file VAULT_PASSWORD_FILES
+                        vault password file
+  --version             show program's version number, config file location, configured module
+                        search path, module location, executable location and exit
+  -B SECONDS, --background SECONDS
+                        run asynchronously, failing after X seconds (default=N/A)
+  -C, --check           don't make any changes; instead, try to predict some of the changes that
+                        may occur
+  -D, --diff            when changing (small) files and templates, show the differences in those
+                        files; works great with --check
+  -K, --ask-become-pass
+                        ask for privilege escalation password
+  -M MODULE_PATH, --module-path MODULE_PATH
+                        prepend colon-separated path(s) to module library (default={{ ANSIBLE_HOME
+                        ~ "/plugins/modules:/usr/share/ansible/plugins/modules" }})
+  -P POLL_INTERVAL, --poll POLL_INTERVAL
+                        set the poll interval if using -B (default=15)
+  -a MODULE_ARGS, --args MODULE_ARGS
+                        The action's options in space separated k=v format: -a 'opt1=val1
+                        opt2=val2' or a json string: -a '{"opt1": "val1", "opt2": "val2"}'
+  -e EXTRA_VARS, --extra-vars EXTRA_VARS
+                        set additional variables as key=value or YAML/JSON, if filename prepend
+                        with @
+  -f FORKS, --forks FORKS
+                        specify number of parallel processes to use (default=5)
+  -h, --help            show this help message and exit
+  -i INVENTORY, --inventory INVENTORY, --inventory-file INVENTORY
+                        specify inventory host path or comma separated host list. --inventory-file
+                        is deprecated
+  -k, --ask-pass        ask for connection password
+  -l SUBSET, --limit SUBSET
+                        further limit selected hosts to an additional pattern
+  -m MODULE_NAME, --module-name MODULE_NAME
+                        Name of the action to execute (default=command)
+  -o, --one-line        condense output
+  -t TREE, --tree TREE  log output to this directory
+  -v, --verbose         Causes Ansible to print more debug messages. Adding multiple -v will
+                        increase the verbosity, the builtin plugins currently evaluate up to
+                        -vvvvvv. A reasonable level to start is -vvv, connection debugging might
+                        require -vvvv.
+
+Privilege Escalation Options:
+  control how and which user you become as on target hosts
+
+  --become-method BECOME_METHOD
+                        privilege escalation method to use (default=sudo), use `ansible-doc -t
+                        become -l` to list valid choices.
+  --become-user BECOME_USER
+                        run operations as this user (default=root)
+  -b, --become          run operations with become (does not imply password prompting)
+
+Connection Options:
+  control as whom and how to connect to hosts
+
+  --private-key PRIVATE_KEY_FILE, --key-file PRIVATE_KEY_FILE
+                        use this file to authenticate the connection
+  --scp-extra-args SCP_EXTRA_ARGS
+                        specify extra arguments to pass to scp only (e.g. -l)
+  --sftp-extra-args SFTP_EXTRA_ARGS
+                        specify extra arguments to pass to sftp only (e.g. -f, -l)
+  --ssh-common-args SSH_COMMON_ARGS
+                        specify common arguments to pass to sftp/scp/ssh (e.g. ProxyCommand)
+  --ssh-extra-args SSH_EXTRA_ARGS
+                        specify extra arguments to pass to ssh only (e.g. -R)
+  -T TIMEOUT, --timeout TIMEOUT
+                        override the connection timeout in seconds (default=10)
+  -c CONNECTION, --connection CONNECTION
+                        connection type to use (default=smart)
+  -u REMOTE_USER, --user REMOTE_USER
+                        connect as this user (default=ansible)
+
+Some actions do not make sense in Ad-Hoc (include, meta, etc)
+
+3.95.250.173 | 172.31.20.213 | t3.micro | https://github.com/saitehith28/DevSecOps.git
+[ ec2-user@ip-172-31-20-213 ~/DevSecOps/Ansible ]$ ansible -vv -i 172.31.17.168, -e ansible_user=ansible -m ping
+[WARNING]: log file at /var/log/ansible.log is not writeable and we cannot create it, aborting
+
+usage: ansible [-h] [--version] [-v] [-b] [--become-method BECOME_METHOD]
+               [--become-user BECOME_USER] [-K | --become-password-file BECOME_PASSWORD_FILE]
+               [-i INVENTORY] [--list-hosts] [-l SUBSET] [-P POLL_INTERVAL] [-B SECONDS] [-o]
+               [-t TREE] [--private-key PRIVATE_KEY_FILE] [-u REMOTE_USER] [-c CONNECTION]
+               [-T TIMEOUT] [--ssh-common-args SSH_COMMON_ARGS] [--sftp-extra-args SFTP_EXTRA_ARGS]
+               [--scp-extra-args SCP_EXTRA_ARGS] [--ssh-extra-args SSH_EXTRA_ARGS]
+               [-k | --connection-password-file CONNECTION_PASSWORD_FILE] [-C] [-D] [-e EXTRA_VARS]
+               [--vault-id VAULT_IDS]
+               [--ask-vault-password | --vault-password-file VAULT_PASSWORD_FILES] [-f FORKS]
+               [-M MODULE_PATH] [--playbook-dir BASEDIR] [--task-timeout TASK_TIMEOUT]
+               [-a MODULE_ARGS] [-m MODULE_NAME]
+               pattern
+ansible: error: the following arguments are required: pattern
+
+usage: ansible [-h] [--version] [-v] [-b] [--become-method BECOME_METHOD]
+               [--become-user BECOME_USER] [-K | --become-password-file BECOME_PASSWORD_FILE]
+               [-i INVENTORY] [--list-hosts] [-l SUBSET] [-P POLL_INTERVAL] [-B SECONDS] [-o]
+               [-t TREE] [--private-key PRIVATE_KEY_FILE] [-u REMOTE_USER] [-c CONNECTION]
+               [-T TIMEOUT] [--ssh-common-args SSH_COMMON_ARGS] [--sftp-extra-args SFTP_EXTRA_ARGS]
+               [--scp-extra-args SCP_EXTRA_ARGS] [--ssh-extra-args SSH_EXTRA_ARGS]
+               [-k | --connection-password-file CONNECTION_PASSWORD_FILE] [-C] [-D] [-e EXTRA_VARS]
+               [--vault-id VAULT_IDS]
+               [--ask-vault-password | --vault-password-file VAULT_PASSWORD_FILES] [-f FORKS]
+               [-M MODULE_PATH] [--playbook-dir BASEDIR] [--task-timeout TASK_TIMEOUT]
+               [-a MODULE_ARGS] [-m MODULE_NAME]
+               pattern
+
+Define and run a single task 'playbook' against a set of hosts
+
+positional arguments:
+  pattern               host pattern
+
+optional arguments:
+  --ask-vault-password, --ask-vault-pass
+                        ask for vault password
+  --become-password-file BECOME_PASSWORD_FILE, --become-pass-file BECOME_PASSWORD_FILE
+                        Become password file
+  --connection-password-file CONNECTION_PASSWORD_FILE, --conn-pass-file CONNECTION_PASSWORD_FILE
+                        Connection password file
+  --list-hosts          outputs a list of matching hosts; does not execute anything else
+  --playbook-dir BASEDIR
+                        Since this tool does not use playbooks, use this as a substitute playbook
+                        directory. This sets the relative path for many features including roles/
+                        group_vars/ etc.
+  --task-timeout TASK_TIMEOUT
+                        set task timeout limit in seconds, must be positive integer.
+  --vault-id VAULT_IDS  the vault identity to use
+  --vault-password-file VAULT_PASSWORD_FILES, --vault-pass-file VAULT_PASSWORD_FILES
+                        vault password file
+  --version             show program's version number, config file location, configured module
+                        search path, module location, executable location and exit
+  -B SECONDS, --background SECONDS
+                        run asynchronously, failing after X seconds (default=N/A)
+  -C, --check           don't make any changes; instead, try to predict some of the changes that
+                        may occur
+  -D, --diff            when changing (small) files and templates, show the differences in those
+                        files; works great with --check
+  -K, --ask-become-pass
+                        ask for privilege escalation password
+  -M MODULE_PATH, --module-path MODULE_PATH
+                        prepend colon-separated path(s) to module library (default={{ ANSIBLE_HOME
+                        ~ "/plugins/modules:/usr/share/ansible/plugins/modules" }})
+  -P POLL_INTERVAL, --poll POLL_INTERVAL
+                        set the poll interval if using -B (default=15)
+  -a MODULE_ARGS, --args MODULE_ARGS
+                        The action's options in space separated k=v format: -a 'opt1=val1
+                        opt2=val2' or a json string: -a '{"opt1": "val1", "opt2": "val2"}'
+  -e EXTRA_VARS, --extra-vars EXTRA_VARS
+                        set additional variables as key=value or YAML/JSON, if filename prepend
+                        with @
+  -f FORKS, --forks FORKS
+                        specify number of parallel processes to use (default=5)
+  -h, --help            show this help message and exit
+  -i INVENTORY, --inventory INVENTORY, --inventory-file INVENTORY
+                        specify inventory host path or comma separated host list. --inventory-file
+                        is deprecated
+  -k, --ask-pass        ask for connection password
+  -l SUBSET, --limit SUBSET
+                        further limit selected hosts to an additional pattern
+  -m MODULE_NAME, --module-name MODULE_NAME
+                        Name of the action to execute (default=command)
+  -o, --one-line        condense output
+  -t TREE, --tree TREE  log output to this directory
+  -v, --verbose         Causes Ansible to print more debug messages. Adding multiple -v will
+                        increase the verbosity, the builtin plugins currently evaluate up to
+                        -vvvvvv. A reasonable level to start is -vvv, connection debugging might
+                        require -vvvv.
+
+Privilege Escalation Options:
+  control how and which user you become as on target hosts
+
+  --become-method BECOME_METHOD
+                        privilege escalation method to use (default=sudo), use `ansible-doc -t
+                        become -l` to list valid choices.
+  --become-user BECOME_USER
+                        run operations as this user (default=root)
+  -b, --become          run operations with become (does not imply password prompting)
+
+Connection Options:
+  control as whom and how to connect to hosts
+
+  --private-key PRIVATE_KEY_FILE, --key-file PRIVATE_KEY_FILE
+                        use this file to authenticate the connection
+  --scp-extra-args SCP_EXTRA_ARGS
+                        specify extra arguments to pass to scp only (e.g. -l)
+  --sftp-extra-args SFTP_EXTRA_ARGS
+                        specify extra arguments to pass to sftp only (e.g. -f, -l)
+  --ssh-common-args SSH_COMMON_ARGS
+                        specify common arguments to pass to sftp/scp/ssh (e.g. ProxyCommand)
+  --ssh-extra-args SSH_EXTRA_ARGS
+                        specify extra arguments to pass to ssh only (e.g. -R)
+  -T TIMEOUT, --timeout TIMEOUT
+                        override the connection timeout in seconds (default=10)
+  -c CONNECTION, --connection CONNECTION
+                        connection type to use (default=smart)
+  -u REMOTE_USER, --user REMOTE_USER
+                        connect as this user (default=ansible)
+
+Some actions do not make sense in Ad-Hoc (include, meta, etc)
+
+3.95.250.173 | 172.31.20.213 | t3.micro | https://github.com/saitehith28/DevSecOps.git
+[ ec2-user@ip-172-31-20-213 ~/DevSecOps/Ansible ]$ ansible-playbook -i inventory.ini 01-playbook.yaml
+[WARNING]: log file at /var/log/ansible.log is not writeable and we cannot create it, aborting
+
+
+PLAY [ping the server] ******************************************************************************
+
+TASK [Gathering Facts] ******************************************************************************
+fatal: [172.31.29.91]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 172.31.29.91 port 22: No route to host", "unreachable": true}
+
+PLAY RECAP ******************************************************************************************
+172.31.29.91               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0
+
+
+3.95.250.173 | 172.31.20.213 | t3.micro | https://github.com/saitehith28/DevSecOps.git
+[ ec2-user@ip-172-31-20-213 ~/DevSecOps/Ansible ]$ git pull
+remote: Enumerating objects: 16, done.
+remote: Counting objects: 100% (16/16), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 10 (delta 7), reused 9 (delta 7), pack-reused 0 (from 0)
+Unpacking objects: 100% (10/10), 860 bytes | 286.00 KiB/s, done.
+From https://github.com/saitehith28/DevSecOps
+   0d4c21f..6956961  main       -> origin/main
+Updating 0d4c21f..6956961
+Fast-forward
+ Ansible/inventory.ini                  | 2 +-
+ MacOS Issues/Git Repo Clone issues.txt | 3 ++-
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+3.95.250.173 | 172.31.20.213 | t3.micro | https://github.com/saitehith28/DevSecOps.git
+[ ec2-user@ip-172-31-20-213 ~/DevSecOps/Ansible ]$ ansible-playbook -i inventory.ini 01-playbook.yaml
+[WARNING]: log file at /var/log/ansible.log is not writeable and we cannot create it, aborting
+
+
+PLAY [ping the server] ******************************************************************************
+
+TASK [Gathering Facts] ******************************************************************************
+[WARNING]: Platform linux on host 172.31.17.168 is using the discovered Python interpreter at
+/usr/bin/python3.9, but future installation of another Python interpreter could change the meaning
+of that path. See https://docs.ansible.com/ansible-
+core/2.14/reference_appendices/interpreter_discovery.html for more information.
+ok: [172.31.17.168]
+
+TASK [ping the web server] **************************************************************************
+ok: [172.31.17.168]
+
+PLAY RECAP ******************************************************************************************
+172.31.17.168              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
+
+3.95.250.173 | 172.31.20.213 | t3.micro | https://github.com/saitehith28/DevSecOps.git
+[ ec2-user@ip-172-31-20-213 ~/DevSecOps/Ansible ]$ ansible all -i 172.31.17.168, -m ping
+[WARNING]: log file at /var/log/ansible.log is not writeable and we cannot create it, aborting
+
+[WARNING]: Platform linux on host 172.31.17.168 is using the discovered Python interpreter at
+/usr/bin/python3.9, but future installation of another Python interpreter could change the meaning
+of that path. See https://docs.ansible.com/ansible-
+core/2.14/reference_appendices/interpreter_discovery.html for more information.
+172.31.17.168 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.9"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+
+3.95.250.173 | 172.31.20.213 | t3.micro | https://github.com/saitehith28/DevSecOps.git
+[ ec2-user@ip-172-31-20-213 ~/DevSecOps/Ansible ]$
