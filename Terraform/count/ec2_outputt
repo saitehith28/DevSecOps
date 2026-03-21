@@ -1,0 +1,27 @@
+{
+  "fruits_names": {
+    "sensitive": false,
+    "type": [
+      "list",
+      "string"
+    ],
+    "value": [
+      "apple",
+      "banana",
+      "apple",
+      "orange"
+    ]
+  },
+  "fruits_set": {
+    "sensitive": false,
+    "type": [
+      "set",
+      "string"
+    ],
+    "value": [
+      "apple",
+      "banana",
+      "orange"
+    ]
+  }
+}
