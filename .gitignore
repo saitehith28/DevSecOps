@@ -1,2 +1,9 @@
 #.DS_Store is a macOS system file
 .DS_Store
+
+# Local .terraform directories
+.terraform/
+
+# .tfstate files
+*.tfstate
+*.tfstate.*

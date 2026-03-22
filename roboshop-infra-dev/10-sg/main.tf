@@ -1,4 +1,5 @@
 module "sg"{
+    count=length(var.sg_names)
     source="git::https://github.com/saitehith28/Terraform-Modules.git//terraform-aws-sg?ref=main"
     project=var.project
     environment=var.environment
