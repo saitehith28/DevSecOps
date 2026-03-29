@@ -10,3 +10,5 @@ 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
 
 git clone https://github.com/saitehith28/DevSecOps.git
 cd DevSecOps/roboshop-infra-dev
+
+Make the repo public it will not ask credentials
