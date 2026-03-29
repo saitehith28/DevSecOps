@@ -4,9 +4,10 @@
 
 ### Terraform Installation
 1. Download: https://developer.hashicorp.com/terraform/downloads  
-2. Extract zip → terraform.exe  
-3. Move to C:\terraform  
-4. Add to PATH: C:\terraform  
+2. Download AMD64
+3. Extract zip → terraform.exe  
+4. Move to C:\terraform  
+5. Add to PATH: C:\terraform  
 
 Verify:
 ```powershell
